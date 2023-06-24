@@ -1,0 +1,56 @@
+{
+  "articles definits": {
+    "llista": [
+      { "ca": "el", "ma": "es / so (després de la preposició 'amb')" },
+      { "ca": "la", "ma": "sa" },
+      { "ca": "els", "ma": "es / ets" },
+      { "ca": "les", "ma": "ses" }
+    ],
+    "notes": {
+      "1": {
+        "text": "al poble de Pollença no utilitzen l'article salat: 'eu'/'u' i 'la'"
+      },
+      "2": {
+        "text": "els articles 'el' i 'la' que són habituals en alguns casos",
+        "llista": [
+          "coses que són 'úniques': la mar, el cel, el rei...",
+          "temporals: tot l'any, l'any que ve, la setmana passada...",
+          "les hores: la una, les dues...",
+          "cardinals: la dreta, l'esquerra...",
+          "per determinades expressions: tot lo món, tot lo dia, la resta..."
+        ]
+      }
+    }
+  },
+  "sufixos": {
+    "llista": [
+      "-ada: gran quantitat, molt (sol usar-se per paraules femenines). Ex: gentada, panxada, bondada, malada...",
+      "-er: gran quantitat, molt (sol usar-se per paraules masculines). Ex: renouer, fumer, guster, maler...",
+      "-era: designa les ganes de fer una cosa. Ex: gastera, xerrera, plorera, nedera, pixera, caguera..."
+    ]
+  },
+  "articles personals": "En, Na, N'",
+  "maneres de dir": {
+    "llista": [
+      {
+        "concepte": "embriaguesa",
+        "paraules": "gatera, moixa, sol·lera, memeu"
+      },
+      { "concepte": "fornicar", "paraules": "boixar, barrinar" },
+      { "concepte": "hòstia", "paraules": "esclat, llosca, nespla" },
+      { "concepte": "pluja fina", "paraules": "brusca, cameta d'aranya" },
+      { "concepte": "vulva", "paraules": "cotorra, poma, figa" },
+      { "concepte": "penis", "paraules": "pardal, fava, perdiu" }
+    ]
+  },
+  "pronúncia": {
+    "text": "en la pronúncia mallorquina es canvia sovint l'ordre de les lletres, es canvien per altres o no es pronuncien",
+    "llista": [
+      "canvi d'ordre amb la 'r': prebe, preda, pradí...",
+      "canvi d''u' per 'v': diven, riven, beven...",
+      "canvi d''e' per 'o': jonoll, cotxo, homo, colzo...",
+      "la 'll' entre vocals i a final de paraula es canvia per 'i' o, entre vocals, a vegades no es pronuncia: ueres, ui, agua/agüia, parei, pareia...",
+      "també hi ha casos excepcionals: teveola, jiqueta..."
+    ]
+  }
+}
