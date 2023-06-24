@@ -14,7 +14,11 @@ const Expressions: React.FC<Props> = (props) => {
   return (
     <Wrapper title={"Expressions"}>
       {props.groupedExpressions.map((eg) => (
-        <Section key={eg[0][0]} title={eg[0][0].charAt(0)}>
+        <Section
+          key={eg[0][0]}
+          title={eg[0][0].charAt(0)}
+          extraClasses={"mt-6"}
+        >
           <ul className="space-y-2">
             {eg.map((e) => (
               <li key={e[0]}>

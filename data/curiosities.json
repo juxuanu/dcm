@@ -2,8 +2,8 @@
   "articles definits": {
     "llista": [
       { "ca": "el", "ma": "es / so (després de la preposició 'amb')" },
-      { "ca": "la", "ma": "sa" },
       { "ca": "els", "ma": "es / ets" },
+      { "ca": "la", "ma": "sa" },
       { "ca": "les", "ma": "ses" }
     ],
     "notes": {
@@ -13,11 +13,11 @@
       "2": {
         "text": "els articles 'el' i 'la' que són habituals en alguns casos",
         "llista": [
-          "coses que són 'úniques': la mar, el cel, el rei...",
-          "temporals: tot l'any, l'any que ve, la setmana passada...",
-          "les hores: la una, les dues...",
           "cardinals: la dreta, l'esquerra...",
+          "coses que són 'úniques': la mar, el cel, el rei...",
+          "les hores: la una, les dues...",
           "per determinades expressions: tot lo món, tot lo dia, la resta..."
+          "temporals: tot l'any, l'any que ve, la setmana passada...",
         ]
       }
     }
@@ -32,23 +32,20 @@
   "articles personals": "En, Na, N'",
   "maneres de dir": {
     "llista": [
-      {
-        "concepte": "embriaguesa",
-        "paraules": "gatera, moixa, sol·lera, memeu"
-      },
+      { "concepte": "embriaguesa", "paraules": "gatera, moixa, sol·lera, memeu" },
       { "concepte": "fornicar", "paraules": "boixar, barrinar" },
       { "concepte": "hòstia", "paraules": "esclat, llosca, nespla" },
+      { "concepte": "penis", "paraules": "pardal, fava, perdiu" }
       { "concepte": "pluja fina", "paraules": "brusca, cameta d'aranya" },
       { "concepte": "vulva", "paraules": "cotorra, poma, figa" },
-      { "concepte": "penis", "paraules": "pardal, fava, perdiu" }
     ]
   },
   "pronúncia": {
     "text": "en la pronúncia mallorquina es canvia sovint l'ordre de les lletres, es canvien per altres o no es pronuncien",
     "llista": [
-      "canvi d'ordre amb la 'r': prebe, preda, pradí...",
-      "canvi d''u' per 'v': diven, riven, beven...",
       "canvi d''e' per 'o': jonoll, cotxo, homo, colzo...",
+      "canvi d''u' per 'v': diven, riven, beven...",
+      "canvi d'ordre amb la 'r': prebe, preda, pradí...",
       "la 'll' entre vocals i a final de paraula es canvia per 'i' o, entre vocals, a vegades no es pronuncia: ueres, ui, agua/agüia, parei, pareia...",
       "també hi ha casos excepcionals: teveola, jiqueta..."
     ]

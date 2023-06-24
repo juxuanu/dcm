@@ -111,7 +111,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const dataService = new DataService();
   return {
     props: {
-      curiositats: await dataService.getCuriosities(),
+      curiositats: dataService.getCuriosities(),
     },
   };
 };
