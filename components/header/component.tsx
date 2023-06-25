@@ -32,17 +32,23 @@ const Header: React.FC<Props> = (props) => {
       <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
         <div>
           <Button active={router.pathname === "/paraules"}>
-            <Link href="/paraules">Paraules</Link>
+            <Link href="/paraules" prefetch={false}>
+              Paraules
+            </Link>
           </Button>
         </div>
         <div>
           <Button active={router.pathname === "/expressions"}>
-            <Link href="/expressions">Expressions</Link>
+            <Link href="/expressions" prefetch={false}>
+              Expressions
+            </Link>
           </Button>
         </div>
         <div>
           <Button active={router.pathname === "/curiositats"}>
-            <Link href="/curiositats">Curiositats</Link>
+            <Link href="/curiositats" prefetch={false}>
+              Curiositats
+            </Link>
           </Button>
         </div>
       </nav>
