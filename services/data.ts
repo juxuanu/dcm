@@ -7,7 +7,6 @@ import {
   lastValueFrom,
   map,
   mergeMap,
-  pairs,
   toArray,
 } from "rxjs";
 
@@ -36,16 +35,17 @@ export interface Curiosities {
 export type Word = [string, string];
 export type Expression = [string, string];
 
+// Global state as cache - to be reused for any instance of DataService.
+let curiositiesCache: Curiosities | undefined;
+let expressionsCache: Expression[][] | undefined;
+let wordsCache: Word[][] | undefined;
+
 export default class DataService {
   public static readonly dataPaths = {
     curiosities: "data/curiosities.json",
     words: "data/words.csv",
     expressions: "data/expressions.csv",
   };
-
-  private curiositiesCache: Curiosities | undefined;
-  private expressionsCache: Expression[][] | undefined;
-  private wordsCache: Word[][] | undefined;
 
   private async parseCsv(
     path: string,
@@ -72,28 +72,26 @@ export default class DataService {
   }
 
   public async getWords(): Promise<Word[][]> {
-    if (this.wordsCache) return this.wordsCache;
+    if (wordsCache) return wordsCache;
 
-    this.wordsCache = await this.parseCsv(DataService.dataPaths.words);
-    return this.wordsCache;
+    wordsCache = await this.parseCsv(DataService.dataPaths.words);
+    return wordsCache;
   }
 
   public async getExpressions(): Promise<Expression[][]> {
-    if (this.expressionsCache) return this.expressionsCache;
+    if (expressionsCache) return expressionsCache;
 
-    this.expressionsCache = await this.parseCsv(
-      DataService.dataPaths.expressions
-    );
-    return this.expressionsCache;
+    expressionsCache = await this.parseCsv(DataService.dataPaths.expressions);
+    return expressionsCache;
   }
 
   public getCuriosities(): Curiosities {
-    if (this.curiositiesCache) return this.curiositiesCache;
+    if (curiositiesCache) return curiositiesCache;
 
     const fileContents = fs.readFileSync(DataService.dataPaths.curiosities, {
       encoding: "utf-8",
     });
-    this.curiositiesCache = JSON.parse(fileContents) as Curiosities;
-    return this.curiositiesCache;
+    curiositiesCache = JSON.parse(fileContents) as Curiosities;
+    return curiositiesCache;
   }
 }

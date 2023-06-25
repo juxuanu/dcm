@@ -1,8 +1,4 @@
-import DataService, {
-  Expression,
-  Word,
-  Curiosities,
-} from "@dcm/services/data.service";
+import DataService, { Curiosities, Expression, Word } from "@dcm/services/data";
 
 const dataService = new DataService();
 
