@@ -1,10 +1,17 @@
-import React, { PropsWithChildren, useCallback, useState } from "react";
+import React, {
+  createContext,
+  PropsWithChildren,
+  useCallback,
+  useState,
+} from "react";
 import Header from "@dcm/components/header";
 import Head from "next/head";
 
 interface Props {
   title?: string;
 }
+
+export const HeaderHeightContext = createContext(0);
 
 const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -14,7 +21,7 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
   );
 
   return (
-    <>
+    <HeaderHeightContext.Provider value={headerHeight}>
       <Head>
         <title key={"title"}>
           {props.title ? `${props.title} | MxC` : "MxC"}
@@ -27,7 +34,7 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
       >
         {props.children}
       </main>
-    </>
+    </HeaderHeightContext.Provider>
   );
 };
 
