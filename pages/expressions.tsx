@@ -3,7 +3,6 @@ import { dataService, Expression } from "@dcm/services";
 import { GetStaticProps } from "next";
 import { Wrapper } from "@dcm/components/wrapper";
 import { StringPair } from "@dcm/components/string-pair";
-import { from, groupBy, lastValueFrom, mergeMap, toArray } from "rxjs";
 import { Section } from "@dcm/components/section";
 
 interface Props {
@@ -32,16 +31,8 @@ const Expressions: React.FC<Props> = (props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const expressions = await dataService.getExpressions();
-  const groupedExpressions = await lastValueFrom(
-    from(expressions).pipe(
-      groupBy((w) => w[0].charAt(0).toUpperCase()),
-      mergeMap((group) => group.pipe(toArray())),
-      toArray()
-    )
-  );
-  return { props: { groupedExpressions } };
-};
+export const getStaticProps: GetStaticProps<Props> = async () => ({
+  props: { groupedExpressions: await dataService.getExpressions() },
+});
 
 export default Expressions;

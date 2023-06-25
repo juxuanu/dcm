@@ -3,7 +3,6 @@ import { dataService, Word } from "@dcm/services";
 import { GetStaticProps } from "next";
 import { Wrapper } from "@dcm/components/wrapper";
 import { StringPair } from "@dcm/components/string-pair";
-import { from, groupBy, lastValueFrom, mergeMap, toArray } from "rxjs";
 
 interface Props {
   groupedWords: Word[][];
@@ -30,16 +29,8 @@ const Paraules: React.FC<Props> = (props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const words = await dataService.getWords();
-  const groupedWords = await lastValueFrom(
-    from(words).pipe(
-      groupBy((w) => w[0].charAt(0).toUpperCase()),
-      mergeMap((group) => group.pipe(toArray())),
-      toArray()
-    )
-  );
-  return { props: { groupedWords } };
-};
+export const getStaticProps: GetStaticProps<Props> = async () => ({
+  props: { groupedWords: await dataService.getWords() },
+});
 
 export default Paraules;

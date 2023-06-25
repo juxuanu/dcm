@@ -1,6 +1,15 @@
 import * as fs from "fs";
 import { readFileSync } from "fs";
-import { filter, from, lastValueFrom, map, toArray } from "rxjs";
+import {
+  filter,
+  from,
+  groupBy,
+  lastValueFrom,
+  map,
+  mergeMap,
+  pairs,
+  toArray,
+} from "rxjs";
 
 export interface Curiosities {
   "articles definits": {
@@ -35,13 +44,13 @@ export default class DataService {
   };
 
   private curiositiesCache: Curiosities | undefined;
-  private expressionsCache: Expression[] | undefined;
-  private wordsCache: Word[] | undefined;
+  private expressionsCache: Expression[][] | undefined;
+  private wordsCache: Word[][] | undefined;
 
   private async parseCsv(
     path: string,
     delimiter: string = ";"
-  ): Promise<[string, string][]> {
+  ): Promise<[string, string][][]> {
     const fileData = readFileSync(path, { encoding: "utf-8" });
     return lastValueFrom(
       from(fileData.split("\n")).pipe(
@@ -50,19 +59,26 @@ export default class DataService {
           const split = line.split(delimiter);
           return [split[0], split[1]];
         }),
+        toArray(),
+        mergeMap((pairs) => pairs.sort((a, b) => a[0].localeCompare(b[0]))),
+        groupBy((w) => w[0].normalize("NFD").charAt(0).toUpperCase()),
+        mergeMap((group) => group.pipe(toArray())),
+        map((pairGroup) =>
+          pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0]))
+        ),
         toArray()
       )
-    ).then((pairs) => pairs.sort((a, b) => a[0].localeCompare(b[0])));
+    );
   }
 
-  public async getWords(): Promise<Word[]> {
+  public async getWords(): Promise<Word[][]> {
     if (this.wordsCache) return this.wordsCache;
 
     this.wordsCache = await this.parseCsv(DataService.dataPaths.words);
     return this.wordsCache;
   }
 
-  public async getExpressions(): Promise<Expression[]> {
+  public async getExpressions(): Promise<Expression[][]> {
     if (this.expressionsCache) return this.expressionsCache;
 
     this.expressionsCache = await this.parseCsv(
