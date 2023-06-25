@@ -27,7 +27,7 @@ const Header: React.FC<Props> = (props) => {
       ref={headerRef}
     >
       <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl">
-        Mallorquí per catalans
+        <Link href={"/"}>Mallorquí per catalans</Link>
       </h1>
       <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
         <div>
