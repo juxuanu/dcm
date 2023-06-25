@@ -41,6 +41,24 @@ const Home: React.FC = () => {
           </li>
         </ul>
       </Section>
+      <Section title={"Com?"} extraClasses="mt-6">
+        <p>
+          El disseny del llibret original ha estat creat amb Adobe InDesign, i
+          posteriorment adaptat.
+        </p>
+        <p>
+          El lloc web ha estat creat amb Next.js i es serveix des de Cloudflare.{" "}
+          <Link
+            href={"https://github.com/juxuanu/dcm"}
+            prefetch={false}
+            target={"_blank"}
+            className="underline"
+          >
+            Codi públic
+          </Link>
+          .
+        </p>
+      </Section>
     </Wrapper>
   );
 };
