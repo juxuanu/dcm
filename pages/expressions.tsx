@@ -1,5 +1,5 @@
 import React from "react";
-import { DataService, Expression } from "@dcm/services";
+import { dataService, Expression } from "@dcm/services";
 import { GetStaticProps } from "next";
 import { Wrapper } from "@dcm/components/wrapper";
 import { StringPair } from "@dcm/components/string-pair";
@@ -32,8 +32,7 @@ const Expressions: React.FC<Props> = (props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  const dataService = new DataService();
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const expressions = await dataService.getExpressions();
   const groupedExpressions = await lastValueFrom(
     from(expressions).pipe(

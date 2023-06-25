@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper } from "@dcm/components/wrapper";
 import { GetStaticProps } from "next";
-import { Curiosities, DataService } from "@dcm/services";
+import { Curiosities, dataService } from "@dcm/services";
 import { Section } from "@dcm/components/section";
 import { StringPair } from "@dcm/components/string-pair";
 
@@ -108,7 +108,6 @@ const Curiositats: React.FC<Props> = (props) => (
 );
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const dataService = new DataService();
   return {
     props: {
       curiositats: dataService.getCuriosities(),

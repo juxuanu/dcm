@@ -1,12 +1,28 @@
 import "@dcm/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
+import React from "react";
+import Head from "next/head";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={raleway.className}>
+      <Head>
+        <title key={"title"}>MxC</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="keywords"
+          content="mallorquí, català, diccionari, expressions, curiositats"
+        />
+        <meta
+          name="description"
+          content="Mallorquí pels catalans: expressions, paraules i curiositats."
+        />
+        <meta name="author" content="Ícar N. S. & Aina D. S." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <Component {...pageProps} />
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { DataService, Word } from "@dcm/services";
+import { dataService, Word } from "@dcm/services";
 import { GetStaticProps } from "next";
 import { Wrapper } from "@dcm/components/wrapper";
 import { StringPair } from "@dcm/components/string-pair";
@@ -31,7 +31,6 @@ const Paraules: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const dataService = new DataService();
   const words = await dataService.getWords();
   const groupedWords = await lastValueFrom(
     from(words).pipe(

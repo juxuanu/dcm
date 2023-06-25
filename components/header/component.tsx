@@ -3,8 +3,11 @@ import Button from "@dcm/components/button";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+// eslint-disable-next-line no-unused-vars
+type Callback = (h: number) => void;
+
 interface Props {
-  onHeightChange: (h: number) => void;
+  onHeightChange: Callback;
 }
 
 const Header: React.FC<Props> = (props) => {

@@ -4,5 +4,7 @@ import DataService, {
   Curiosities,
 } from "@dcm/services/data.service";
 
-export { DataService };
+const dataService = new DataService();
+
+export { dataService };
 export type { Word, Curiosities, Expression };

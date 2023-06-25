@@ -16,7 +16,9 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
   return (
     <>
       <Head>
-        <title>{props.title ? `${props.title} | MxC` : "MxC"}</title>
+        <title key={"title"}>
+          {props.title ? `${props.title} | MxC` : "MxC"}
+        </title>
       </Head>
       <Header onHeightChange={headerHeightChangeCallback} />
       <main

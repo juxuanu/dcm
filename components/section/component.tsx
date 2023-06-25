@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import { StringPair } from "@dcm/components/string-pair";
 
 interface Props {
   title: string;
