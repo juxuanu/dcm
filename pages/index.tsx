@@ -3,6 +3,8 @@ import { Wrapper } from "@dcm/components/wrapper";
 import { Section } from "@dcm/components/section";
 import Link from "next/link";
 import { StringPair } from "@dcm/components/string-pair";
+import { LinkedInLogo } from "@dcm/components/linkedin-logo";
+import { InstagramLogo } from "@dcm/components/instagram-logo";
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +16,10 @@ const Home: React.FC = () => {
         </p>
         <p>
           Basat en un llibret autoeditat i enquadernat per l&apos;
-          <Link className="underline" href={"mailto:ainadelsol.disseny@gmail.com"}>
+          <Link
+            className="underline"
+            href={"mailto:ainadelsol.disseny@gmail.com"}
+          >
             Aina
           </Link>
           , com a regal per l&apos;
@@ -34,10 +39,43 @@ const Home: React.FC = () => {
       <Section title={"Qui?"} extraClasses="mt-6">
         <ul className="space-y-2">
           <li>
-            <StringPair one={"Programació"} two={"Ícar"} />
+            <StringPair
+              one={"Programació"}
+              two={"Ícar"}
+              extraElement={
+                <Link
+                  href={"https://www.linkedin.com/in/icarns/"}
+                  prefetch={false}
+                  target={"_blank"}
+                >
+                  <LinkedInLogo />
+                </Link>
+              }
+            />
           </li>
           <li>
-            <StringPair one={"Disseny"} two={"Aina"} />
+            <StringPair
+              one={"Disseny"}
+              two={"Aina"}
+              extraElement={
+                <div className="w-fit h-fit flex flex-row gap-1">
+                  <Link
+                    href={"https://www.linkedin.com/in/ainadelsol/"}
+                    prefetch={false}
+                    target={"_blank"}
+                  >
+                    <LinkedInLogo />
+                  </Link>
+                  <Link
+                    href={"https://www.instagram.com/ainadelsol/"}
+                    prefetch={false}
+                    target={"_blank"}
+                  >
+                    <InstagramLogo />
+                  </Link>
+                </div>
+              }
+            />
           </li>
         </ul>
       </Section>
