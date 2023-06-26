@@ -26,30 +26,30 @@ const Header: React.FC<Props> = (props) => {
         bg-bookBlue text-neutral-100 dark:text-blue-200 dark:bg-black`}
       ref={headerRef}
     >
-      <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl">
-        <Link href={"/"}>Mallorquí per catalans</Link>
-      </h1>
+      <Link href={"/"}>
+        <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl">
+          Mallorquí per catalans
+        </h1>
+      </Link>
       <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
         <div>
-          <Button active={router.pathname === "/paraules"}>
-            <Link href="/paraules" prefetch={false}>
-              Paraules
-            </Link>
-          </Button>
+          <Link href="/paraules" prefetch={false}>
+            <Button active={router.pathname === "/paraules"}>Paraules</Button>
+          </Link>
         </div>
         <div>
-          <Button active={router.pathname === "/expressions"}>
-            <Link href="/expressions" prefetch={false}>
+          <Link href="/expressions" prefetch={false}>
+            <Button active={router.pathname === "/expressions"}>
               Expressions
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
         <div>
-          <Button active={router.pathname === "/curiositats"}>
-            <Link href="/curiositats" prefetch={false}>
+          <Link href="/curiositats" prefetch={false}>
+            <Button active={router.pathname === "/curiositats"}>
               Curiositats
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </nav>
     </header>

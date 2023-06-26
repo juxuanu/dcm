@@ -14,23 +14,24 @@ const Navigator: React.FC<Props> = (props) => {
             key={i}
             className="uppercase w-8 h-8 overflow-hidden flex justify-center items-center"
           >
-            <Button
-              active={false}
-              extraClasses="flex justify-center items-center"
+            <div
+              className="w-fit h-fit"
+              onClick={() => {
+                const element = document.getElementById(i);
+                if (element)
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+              }}
             >
-              <div
-                onClick={() => {
-                  const element = document.getElementById(i);
-                  if (element)
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                }}
+              <Button
+                active={false}
+                extraClasses="flex justify-center items-center"
               >
                 {i}
-              </div>
-            </Button>
+              </Button>
+            </div>
           </li>
         ))}
       </ul>
