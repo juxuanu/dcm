@@ -2,9 +2,13 @@ import React from "react";
 import { Wrapper } from "@dcm/components/wrapper";
 import { Section } from "@dcm/components/section";
 import Link from "next/link";
+import Image from "next/image";
 import { StringPair } from "@dcm/components/string-pair";
 import { LinkedInLogo } from "@dcm/components/linkedin-logo";
 import { InstagramLogo } from "@dcm/components/instagram-logo";
+import llibret1 from "../assets/images/llibret1-mini.jpeg";
+import llibret2 from "../assets/images/llibret2-mini.jpeg";
+import llibret3 from "../assets/images/llibret3-mini.jpeg";
 
 const Home: React.FC = () => {
   return (
@@ -28,6 +32,35 @@ const Home: React.FC = () => {
           </Link>
           .
         </p>
+        <div
+          className={`w-full h-auto overflow-x-auto flex flex-row flex-nowrap gap-3 my-6
+            [&>*]:w-72 [&>*]:h-auto `}
+        >
+          <Link href={"/llibret1.jpeg"}>
+            <Image
+              loading={"lazy"}
+              src={llibret1}
+              title={"Llibret: vocabulari"}
+              alt={"Llibret: vocabulari"}
+            />
+          </Link>
+          <Link href={"/llibret2.jpeg"}>
+            <Image
+              loading={"lazy"}
+              src={llibret2}
+              title={"Llibret: portada"}
+              alt={"Llibret: portada"}
+            />
+          </Link>
+          <Link href={"/llibret3.jpeg"}>
+            <Image
+              loading={"lazy"}
+              src={llibret3}
+              title={"Llibret: paraules"}
+              alt={"Llibret: paraules"}
+            />
+          </Link>
+        </div>
         <div className="w-full mt-10 pr-4 text-right border-r-2 border-solid border-bookBlue">
           <blockquote className="italic">
             Un recull fet per tu, Ícar, perquè puguis aprendre un poquet més de
