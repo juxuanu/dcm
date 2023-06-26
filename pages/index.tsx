@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         </p>
         <p>
           Basat en un llibret autoeditat i enquadernat per l&apos;
-          <Link className="underline" href={"mailto:aniads@hotmail.es"}>
+          <Link className="underline" href={"mailto:ainadelsol.disseny@gmail.com"}>
             Aina
           </Link>
           , com a regal per l&apos;
