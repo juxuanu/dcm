@@ -25,7 +25,7 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
     <HeaderHeightContext.Provider value={headerHeight}>
       <Head>
         <title key={"title"}>
-          {props.title ? `${props.title} | MxC` : "MxC"}
+          {props.title ? `${props.title} | MxC` : "Mallorquí per catalans"}
         </title>
       </Head>
       <Header onHeightChange={headerHeightChangeCallback} />

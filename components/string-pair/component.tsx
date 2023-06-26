@@ -14,7 +14,7 @@ const StringPair: React.FC<Props> = (props) => {
         {props.extraElement && (
           <div className="w-fit h-fit my-auto mr-4">{props.extraElement}</div>
         )}
-        <p className="first-letter:capitalize w-fit h-fit my-auto">
+        <p className="first-letter:capitalize w-full h-fit my-auto">
           {props.two}
         </p>
       </div>

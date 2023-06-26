@@ -7,7 +7,7 @@ const Footer: React.FC = () => (
       <img
         className="w-auto h-5 mx-auto"
         loading={"lazy"}
-        src={"/corito.webp"}
+        src={"/corito.png"}
         alt={"Cor blau"}
       />
     </div>
