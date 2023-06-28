@@ -1,1 +1,1 @@
-# Diccionari: català central <-> mallorquí
+
