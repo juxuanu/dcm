@@ -7,16 +7,15 @@ import Link from "next/link";
 type Callback = (h: number) => void;
 
 interface Props {
-  onHeightChange: Callback;
+  onHeaderHeightChange: Callback;
 }
 
 const Header: React.FC<Props> = (props) => {
   const router = useRouter();
   const headerRef = createRef<HTMLDivElement>();
-  useEffect(
-    () => props.onHeightChange(headerRef.current?.clientHeight ?? 0),
-    [headerRef, props]
-  );
+  useEffect(() => {
+    props.onHeaderHeightChange(headerRef.current?.clientHeight ?? 120);
+  }, [headerRef, props]);
 
   return (
     <header
@@ -33,19 +32,19 @@ const Header: React.FC<Props> = (props) => {
       </Link>
       <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
         <div>
-          <Link href="/paraules" prefetch={false}>
+          <Link href="/paraules">
             <Button active={router.pathname === "/paraules"}>Paraules</Button>
           </Link>
         </div>
         <div>
-          <Link href="/expressions" prefetch={false}>
+          <Link href="/expressions">
             <Button active={router.pathname === "/expressions"}>
               Expressions
             </Button>
           </Link>
         </div>
         <div>
-          <Link href="/curiositats" prefetch={false}>
+          <Link href="/curiositats">
             <Button active={router.pathname === "/curiositats"}>
               Curiositats
             </Button>
