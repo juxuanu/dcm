@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import Header from "@dcm/components/header";
 import Head from "next/head";
 import { Footer } from "@dcm/components/footer";
@@ -6,8 +6,6 @@ import { Footer } from "@dcm/components/footer";
 interface Props {
   title?: string;
 }
-
-export const HeaderHeightContext = createContext(0);
 
 const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
   const [headerHeight, setHeaderHeight] = useState(120);

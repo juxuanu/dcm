@@ -1,5 +1,4 @@
-import React, { PropsWithChildren, useContext } from "react";
-import { HeaderHeightContext } from "@dcm/components/wrapper/component";
+import React, { PropsWithChildren } from "react";
 
 interface Props {
   title: string;
@@ -8,8 +7,6 @@ interface Props {
 }
 
 const Section: React.FC<PropsWithChildren<Props>> = (props) => {
-  const headerHeight = useContext(HeaderHeightContext);
-
   return (
     <>
       <h2
@@ -18,7 +15,7 @@ const Section: React.FC<PropsWithChildren<Props>> = (props) => {
           "text-xl font-semibold w-full h-fit border-b border-solid border-bookBlue border-opacity-50 mb-3 uppercase " +
           props.extraClasses
         }
-        style={{ scrollMargin: headerHeight + 20 }}
+        style={{ scrollMargin: 120 + 20 }}
       >
         {props.title}
       </h2>
