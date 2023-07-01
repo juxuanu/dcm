@@ -1,29 +1,17 @@
-import React, { createRef, useEffect } from "react";
+import React from "react";
 import Button from "@dcm/components/button";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-// eslint-disable-next-line no-unused-vars
-type Callback = (h: number) => void;
-
-interface Props {
-  onHeaderHeightChange: Callback;
-}
-
-const Header: React.FC<Props> = (props) => {
+const Header: React.FC = () => {
   const router = useRouter();
-  const headerRef = createRef<HTMLDivElement>();
-  useEffect(() => {
-    props.onHeaderHeightChange(headerRef.current?.clientHeight ?? 120);
-  }, [headerRef, props]);
 
   return (
     <header
-      className={`w-full h-fit flex flex-col flex-nowrap justify-center items-center 
+      className={`w-full h-32 flex flex-col flex-nowrap justify-center items-center 
         px-4 py-6 mb-6 z-10 
         fixed top-0 left-0 
         bg-bookBlue text-neutral-100 dark:text-blue-200 dark:bg-black`}
-      ref={headerRef}
     >
       <Link href={"/"}>
         <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl">

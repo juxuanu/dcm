@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren } from "react";
 import Header from "@dcm/components/header";
 import Head from "next/head";
 import { Footer } from "@dcm/components/footer";
@@ -8,8 +8,6 @@ interface Props {
 }
 
 const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
-  const [headerHeight, setHeaderHeight] = useState(120);
-
   return (
     <>
       <Head>
@@ -17,11 +15,8 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
           {props.title ? `${props.title} | MxC` : "Mallorquí per catalans"}
         </title>
       </Head>
-      <Header onHeaderHeightChange={(h) => setHeaderHeight(h)} />
-      <main
-        className="px-4 mb-12 max-w-4xl mx-auto"
-        style={{ marginTop: headerHeight + 20 }}
-      >
+      <Header />
+      <main className="px-4 mb-12 max-w-4xl mx-auto mt-36">
         {props.children}
       </main>
       <Footer />
