@@ -45,7 +45,7 @@ const Curiositats: React.FC<Props> = (props) => (
                     <span className="font-semibold">{split[0]}</span>:{split[1]}
                   </li>
                 );
-              }
+              },
             )}
           </ul>
         </div>

@@ -49,7 +49,7 @@ export default class DataService {
 
   private async parseCsv(
     path: string,
-    delimiter: string = ";"
+    delimiter: string = ";",
   ): Promise<[string, string][][]> {
     const fileData = readFileSync(path, { encoding: "utf-8" });
     return lastValueFrom(
@@ -64,10 +64,10 @@ export default class DataService {
         groupBy((w) => w[0].normalize("NFD").charAt(0).toUpperCase()),
         mergeMap((group) => group.pipe(toArray())),
         map((pairGroup) =>
-          pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0]))
+          pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0])),
         ),
-        toArray()
-      )
+        toArray(),
+      ),
     );
   }
 
