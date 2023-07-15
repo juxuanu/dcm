@@ -15,18 +15,18 @@ interface Props {
 const ListPage: React.FC<Props> = (props) => {
   return (
     <Wrapper title={props.title}>
-      <Navigator data={props.groupedData.map((i) => i[0][0].charAt(0))} />
+      <Navigator data={props.groupedData.map((i) => i[0].data[0].charAt(0))} />
       {props.groupedData.map((group) => (
         <Section
-          key={group[0][0]}
-          title={group[0][0].charAt(0)}
+          key={group[0].id}
+          title={group[0].data[0].charAt(0)}
           extraClasses={"mt-6"}
-          id={group[0][0].charAt(0)}
+          id={group[0].data[0].charAt(0)}
         >
           <ul className="space-y-2">
             {group.map((item) => (
-              <li key={item[0]}>
-                <StringPair one={item[0]} two={item[1]} />
+              <li key={item.id}>
+                <StringPair one={item.data[0]} two={item.data[1]} />
               </li>
             ))}
           </ul>

@@ -9,6 +9,7 @@ import {
   mergeMap,
   toArray,
 } from "rxjs";
+import { randomUUID } from "crypto";
 
 export interface Curiosities {
   "articles definits": {
@@ -32,8 +33,13 @@ export interface Curiosities {
   };
 }
 
-export type Word = [string, string];
-export type Expression = [string, string];
+interface DataPair {
+  id: ReturnType<typeof randomUUID>;
+  data: [string, string];
+}
+
+export type Word = DataPair;
+export type Expression = DataPair;
 
 // Global state as cache - to be reused for any instance of DataService.
 let curiositiesCache: Curiosities | undefined;
@@ -41,7 +47,7 @@ let expressionsCache: Expression[][] | undefined;
 let wordsCache: Word[][] | undefined;
 
 export default class DataService {
-  public static readonly dataPaths = {
+  private static readonly dataPaths = {
     curiosities: "data/curiosities.json",
     words: "data/words.csv",
     expressions: "data/expressions.csv",
@@ -71,18 +77,26 @@ export default class DataService {
     );
   }
 
+  private static buildDataPairs(data: [string, string][][]): DataPair[][] {
+    return data.map((pairs) =>
+      pairs.map((pair) => ({ id: randomUUID(), data: pair })),
+    );
+  }
+
   public static async getWords(): Promise<Word[][]> {
     if (wordsCache) return wordsCache;
 
-    wordsCache = await DataService.parseCsv(DataService.dataPaths.words);
+    wordsCache = DataService.buildDataPairs(
+      await DataService.parseCsv(DataService.dataPaths.words),
+    );
     return wordsCache;
   }
 
   public static async getExpressions(): Promise<Expression[][]> {
     if (expressionsCache) return expressionsCache;
 
-    expressionsCache = await DataService.parseCsv(
-      DataService.dataPaths.expressions,
+    expressionsCache = DataService.buildDataPairs(
+      await DataService.parseCsv(DataService.dataPaths.expressions),
     );
     return expressionsCache;
   }
