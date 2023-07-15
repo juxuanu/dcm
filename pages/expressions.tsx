@@ -1,5 +1,5 @@
 import React from "react";
-import { dataService, Expression } from "@dcm/services";
+import { DataService, Expression } from "@dcm/services";
 import { GetStaticProps } from "next";
 import ListPage from "@dcm/components/list-page";
 
@@ -12,7 +12,7 @@ const Expressions: React.FC<Props> = (props) => (
 );
 
 export const getStaticProps: GetStaticProps<Props> = async () => ({
-  props: { groupedExpressions: await dataService.getExpressions() },
+  props: { groupedExpressions: await DataService.getExpressions() },
 });
 
 export default Expressions;

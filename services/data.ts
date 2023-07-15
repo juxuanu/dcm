@@ -47,7 +47,7 @@ export default class DataService {
     expressions: "data/expressions.csv",
   };
 
-  private async parseCsv(
+  private static async parseCsv(
     path: string,
     delimiter: string = ";",
   ): Promise<[string, string][][]> {
@@ -71,21 +71,23 @@ export default class DataService {
     );
   }
 
-  public async getWords(): Promise<Word[][]> {
+  public static async getWords(): Promise<Word[][]> {
     if (wordsCache) return wordsCache;
 
-    wordsCache = await this.parseCsv(DataService.dataPaths.words);
+    wordsCache = await DataService.parseCsv(DataService.dataPaths.words);
     return wordsCache;
   }
 
-  public async getExpressions(): Promise<Expression[][]> {
+  public static async getExpressions(): Promise<Expression[][]> {
     if (expressionsCache) return expressionsCache;
 
-    expressionsCache = await this.parseCsv(DataService.dataPaths.expressions);
+    expressionsCache = await DataService.parseCsv(
+      DataService.dataPaths.expressions,
+    );
     return expressionsCache;
   }
 
-  public getCuriosities(): Curiosities {
+  public static getCuriosities(): Curiosities {
     if (curiositiesCache) return curiositiesCache;
 
     const fileContents = fs.readFileSync(DataService.dataPaths.curiosities, {
