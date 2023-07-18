@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Wrapper } from "@dcm/components/wrapper";
 import { Section } from "@dcm/components/section";
 import { StringPair } from "@dcm/components/string-pair";
 import { Expression, Word } from "@dcm/services/data";
-import { Navigator } from "../navigator";
+import { Navigator } from "@dcm/components/navigator";
+import { filterSearchTerm } from "./utils";
 
-type Data = Expression[][] | Word[][];
+export type Data = Expression[][] | Word[][];
 
 interface Props {
   groupedData: Data;
@@ -13,20 +14,30 @@ interface Props {
 }
 
 const ListPage: React.FC<Props> = (props) => {
+  const [searchTerm, setSearchTerm] = useState<string | undefined>();
+  const shownData = useMemo(
+    () => filterSearchTerm(props.groupedData, searchTerm),
+    [props.groupedData, searchTerm],
+  );
+  const onSearch = useCallback((input: string) => setSearchTerm(input), []);
+
   return (
     <Wrapper title={props.title}>
-      <Navigator data={props.groupedData.map((i) => i[0].data[0].charAt(0))} />
-      {props.groupedData.map((group) => (
+      <Navigator
+        onSearch={onSearch}
+        data={props.groupedData.map((i) => i[0].one.charAt(0))}
+      />
+      {shownData.map((group) => (
         <Section
           key={group[0].id}
-          title={group[0].data[0].charAt(0)}
+          title={group[0].one.charAt(0)}
           extraClasses={"mt-6"}
-          id={group[0].data[0].charAt(0)}
+          id={group[0].one.charAt(0)}
         >
           <ul className="space-y-2">
             {group.map((item) => (
               <li key={item.id}>
-                <StringPair one={item.data[0]} two={item.data[1]} />
+                <StringPair one={item.one} two={item.two} />
               </li>
             ))}
           </ul>

@@ -35,7 +35,8 @@ export interface Curiosities {
 
 interface DataPair {
   id: ReturnType<typeof randomUUID>;
-  data: [string, string];
+  one: string;
+  two: string;
 }
 
 export type Word = DataPair;
@@ -79,7 +80,7 @@ export default class DataService {
 
   private static buildDataPairs(data: [string, string][][]): DataPair[][] {
     return data.map((pairs) =>
-      pairs.map((pair) => ({ id: randomUUID(), data: pair })),
+      pairs.map((pair) => ({ id: randomUUID(), one: pair[0], two: pair[1] })),
     );
   }
 
