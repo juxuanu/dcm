@@ -18,5 +18,8 @@ export function filterSearchTerm(
 }
 
 function normalize(input: string): string {
-  return input.toLocaleLowerCase("ca-ES").normalize("NFD");
+  return input
+    .toLocaleLowerCase("ca-ES")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 }
