@@ -16,6 +16,7 @@ const Navigator: React.FC<Props> = (props) => {
       props.onSearch("");
       if (inputRef.current) inputRef.current.value = "";
     }
+    if (searchMode && inputRef.current) inputRef.current.focus();
   }, [inputRef, props, searchMode]);
 
   return (
