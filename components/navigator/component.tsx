@@ -41,7 +41,7 @@ const Navigator: React.FC<Props> = (props) => {
           style={{ width: searchMode ? "100%" : 0 }}
           tabIndex={searchMode ? 1 : -1}
           role="search"
-          onInput={(event) => props.onSearch(event.currentTarget.value)}
+          onChange={(event) => props.onSearch(event.currentTarget.value)}
           placeholder="això"
         />
       </div>
