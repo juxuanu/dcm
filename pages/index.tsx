@@ -9,6 +9,7 @@ import { InstagramLogo } from "@dcm/components/instagram-logo";
 import llibret1 from "../assets/images/llibret1-mini.jpeg";
 import llibret2 from "../assets/images/llibret2-mini.jpeg";
 import llibret3 from "../assets/images/llibret3-mini.jpeg";
+import { EmailLogo } from "@dcm/components/email-logo";
 
 const Home: React.FC = () => {
   return (
@@ -73,21 +74,6 @@ const Home: React.FC = () => {
         <ul className="space-y-2">
           <li>
             <StringPair
-              one={"Programació"}
-              two={"Ícar"}
-              extraElement={
-                <Link
-                  href={"https://www.linkedin.com/in/icarns/"}
-                  prefetch={false}
-                  target={"_blank"}
-                >
-                  <LinkedInLogo />
-                </Link>
-              }
-            />
-          </li>
-          <li>
-            <StringPair
               one={"Disseny"}
               two={"Aina"}
               extraElement={
@@ -105,6 +91,29 @@ const Home: React.FC = () => {
                     target={"_blank"}
                   >
                     <InstagramLogo />
+                  </Link>
+                  <Link href={"mailto:ainadelsol.disseny@gmail.com"}>
+                    <EmailLogo />
+                  </Link>
+                </div>
+              }
+            />
+          </li>
+          <li>
+            <StringPair
+              one={"Programació"}
+              two={"Ícar"}
+              extraElement={
+                <div className="w-fit h-fit flex flex-row gap-1">
+                  <Link
+                    href={"https://www.linkedin.com/in/icarns/"}
+                    prefetch={false}
+                    target={"_blank"}
+                  >
+                    <LinkedInLogo />
+                  </Link>
+                  <Link href={"mailto:dcm@icarns.xyz"}>
+                    <EmailLogo />
                   </Link>
                 </div>
               }

@@ -11,12 +11,12 @@ const StringPair: React.FC<Props> = (props) => {
     <div className="w-full h-full">
       <h3 className="font-semibold first-letter:capitalize">{props.one}</h3>
       <div className="font-light w-full flex flex-row flex-nowrap justify-left content-baseline">
-        {props.extraElement && (
-          <div className="w-fit h-fit my-auto mr-4">{props.extraElement}</div>
-        )}
         <p className="first-letter:capitalize w-full h-fit my-auto">
           {props.two}
         </p>
+        {props.extraElement && (
+          <div className="w-fit h-fit my-auto">{props.extraElement}</div>
+        )}
       </div>
     </div>
   );
