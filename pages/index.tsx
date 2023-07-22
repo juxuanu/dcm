@@ -130,6 +130,39 @@ const Home: React.FC = () => {
           .
         </p>
       </Section>
+      <Section title={"On?"} extraClasses="mt-6">
+        <p>Aquest projecte ha aparegut en diferents mitjans de comunicació:</p>
+        <ul className="list-disc list-inside">
+          <li>
+            IB3:{" "}
+            <Link
+              className="underline"
+              href={
+                "https://s3.amazonaws.com/media.ib3alacarta.com/058decc8-4b98-4f6f-b3b4-9b2984825171/da217664-1bdf-11ee-a224-c437725f29d4/DLT8706291.mp4"
+              }
+            >
+              Cinc dies
+            </Link>{" "}
+            (entrevista a les 2h i 9min)
+          </li>
+          <li>
+            <Link
+              className="underline"
+              href={
+                "https://www.arabalears.cat/cultura/catalunya-nyonya-mallorca-xubec-diccionari-mallorquina-fet-catala_1_4740442.html"
+              }
+            >
+              ARA Balears
+            </Link>
+          </li>
+          <li>
+            Revista de Llucmajor:{" "}
+            <Link className="underline" href={"/revista-llucmajor.jpg"}>
+              imprès
+            </Link>
+          </li>
+        </ul>
+      </Section>
     </Wrapper>
   );
 };
