@@ -155,6 +155,18 @@ const Home: React.FC = () => {
             (entrevista a les 2h i 9min)
           </li>
           <li>
+            IB3:{" "}
+            <Link
+              className="underline"
+              href={
+                "https://s3.amazonaws.com/media.ib3alacarta.com/eeeeb5c0-1941-4e25-884d-91010e713d8d/db3060aa-1737-11ee-a224-c437725f29d4/6-422-121478.mp3"
+              }
+            >
+              Ràdio
+            </Link>{" "}
+            (entrevista al minut 42 i mig)
+          </li>
+          <li>
             <Link
               className="underline"
               href={
