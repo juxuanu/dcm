@@ -39,26 +39,26 @@ const Home: React.FC = () => {
         >
           <Link href={"/llibret1.jpeg"}>
             <Image
-              loading={"lazy"}
               src={llibret1}
               title={"Llibret: vocabulari"}
               alt={"Llibret: vocabulari"}
+              placeholder={"blur"}
             />
           </Link>
           <Link href={"/llibret2.jpeg"}>
             <Image
-              loading={"lazy"}
               src={llibret2}
               title={"Llibret: portada"}
               alt={"Llibret: portada"}
+              placeholder={"blur"}
             />
           </Link>
           <Link href={"/llibret3.jpeg"}>
             <Image
-              loading={"lazy"}
               src={llibret3}
               title={"Llibret: paraules"}
               alt={"Llibret: paraules"}
+              placeholder={"blur"}
             />
           </Link>
         </div>
