@@ -11,6 +11,6 @@ const svg = (
   </svg>
 );
 
-const EmailLogo: React.FC = () => <div className="w-5 h-5">{svg}</div>;
+const EmailLogo: React.FC = () => <div className="w-6 h-6">{svg}</div>;
 
 export default EmailLogo;

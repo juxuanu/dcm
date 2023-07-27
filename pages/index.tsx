@@ -82,6 +82,7 @@ const Home: React.FC = () => {
                     href={"https://www.linkedin.com/in/ainadelsol/"}
                     prefetch={false}
                     target={"_blank"}
+                    title={"LinkedIn"}
                   >
                     <LinkedInLogo />
                   </Link>
@@ -89,10 +90,14 @@ const Home: React.FC = () => {
                     href={"https://www.instagram.com/ainadelsol/"}
                     prefetch={false}
                     target={"_blank"}
+                    title={"Instagram"}
                   >
                     <InstagramLogo />
                   </Link>
-                  <Link href={"mailto:ainadelsol.disseny@gmail.com"}>
+                  <Link
+                    href={"mailto:ainadelsol.disseny@gmail.com"}
+                    title={"E-Mail"}
+                  >
                     <EmailLogo />
                   </Link>
                 </div>
@@ -109,10 +114,11 @@ const Home: React.FC = () => {
                     href={"https://www.linkedin.com/in/icarns/"}
                     prefetch={false}
                     target={"_blank"}
+                    title={"LinkedIn"}
                   >
                     <LinkedInLogo />
                   </Link>
-                  <Link href={"mailto:dcm@icarns.xyz"}>
+                  <Link href={"mailto:dcm@icarns.xyz"} title={"E-Mail"}>
                     <EmailLogo />
                   </Link>
                 </div>

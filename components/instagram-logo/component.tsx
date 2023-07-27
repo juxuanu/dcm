@@ -9,6 +9,6 @@ const svg = (
   </svg>
 );
 
-const InstagramLogo: React.FC = () => <div className="w-5 h-5">{svg}</div>;
+const InstagramLogo: React.FC = () => <div className="w-6 h-6">{svg}</div>;
 
 export default InstagramLogo;
