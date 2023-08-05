@@ -2,15 +2,14 @@ import React, { PropsWithChildren } from "react";
 import Head from "next/head";
 import { Footer } from "@dcm/components/footer";
 import dynamic from "next/dynamic";
+import { Skeleton as HeaderSkeleton } from "@dcm/components/header";
 
 interface Props {
   title?: string;
 }
 
 const DynamicHeader = dynamic(() => import("@dcm/components/header"), {
-  loading: () => (
-    <div className="h-32 w-full mb-6 bg-bookBlue dark:bg-black animate-pulse"></div>
-  ),
+  loading: () => <HeaderSkeleton />,
 });
 
 const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
