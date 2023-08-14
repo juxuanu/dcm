@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "13.4.13",
-    "preact": "^10.16.0",
+    "preact": "^10.17.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rxjs": "^7.8.1",
