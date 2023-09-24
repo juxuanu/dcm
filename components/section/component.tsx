@@ -8,7 +8,7 @@ interface Props {
 
 const Section: React.FC<PropsWithChildren<Props>> = (props) => {
   return (
-    <article>
+    <>
       <h2
         id={props.id}
         className={
@@ -19,7 +19,7 @@ const Section: React.FC<PropsWithChildren<Props>> = (props) => {
         {props.title}
       </h2>
       {props.children}
-    </article>
+    </>
   );
 };
 
