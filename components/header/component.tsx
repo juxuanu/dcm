@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         bg-bookBlue text-neutral-100 dark:text-blue-200 dark:bg-black`}
     >
       <Link href={"/"}>
-        <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl">
+        <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl whitespace-nowrap">
           Mallorquí per catalans
         </h1>
       </Link>
