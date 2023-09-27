@@ -21,9 +21,9 @@ const Wrapper: React.FC<PropsWithChildren<Props>> = (props) => {
         </title>
       </Head>
       <DynamicHeader />
-      <article className="px-4 mb-12 max-w-4xl mx-auto mt-36">
+      <main className="px-4 mb-12 max-w-4xl mx-auto mt-36">
         {props.children}
-      </article>
+      </main>
       <Footer />
     </>
   );
