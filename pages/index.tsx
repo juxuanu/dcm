@@ -144,6 +144,11 @@ const Home: React.FC = () => {
           </Link>
           .
         </p>
+        <p className={"w-full text-center mt-4"}>
+          &#9888; No s&apos;ha rebut cap tipus d&apos;assistència lingüística i
+          no som experts en aquest àmbit.{" "}
+          <span className={"invisible md:visible"}>&#9888;</span>
+        </p>
       </Section>
       <Section title={"On?"} extraClasses="mt-6">
         <p>Aquest projecte ha aparegut en diferents mitjans de comunicació:</p>
