@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   output: "export",
   images: { unoptimized: true },
+  experimental: {
+    webpackBuildWorker: true,
+  },
   swcMinify: true,
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
