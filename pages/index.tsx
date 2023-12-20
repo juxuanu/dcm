@@ -6,9 +6,9 @@ import Image from "next/image";
 import { StringPair } from "@dcm/components/string-pair";
 import { LinkedInLogo } from "@dcm/components/linkedin-logo";
 import { InstagramLogo } from "@dcm/components/instagram-logo";
-import llibret1 from "../assets/images/llibret1-mini.jpeg";
-import llibret2 from "../assets/images/llibret2-mini.jpeg";
-import llibret3 from "../assets/images/llibret3-mini.jpeg";
+import llibret1 from "../public/llibret1.jpeg";
+import llibret2 from "../public/llibret2.jpeg";
+import llibret3 from "../public/llibret3.jpeg";
 import { EmailLogo } from "@dcm/components/email-logo";
 
 const Home: React.FC = () => {
