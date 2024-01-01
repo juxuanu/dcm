@@ -133,7 +133,7 @@ const Home: React.FC = () => {
           posteriorment adaptat.
         </p>
         <p>
-          El lloc web ha estat creat amb Next.js i es serveix des de Cloudflare.{" "}
+          El lloc web ha estat creat amb Next.js.{" "}
           <Link
             href={"https://github.com/juxuanu/dcm"}
             prefetch={false}
