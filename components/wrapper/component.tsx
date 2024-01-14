@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import Head from "next/head";
-import { Footer } from "@dcm/components/footer";
-import Header from "@dcm/components/header";
+import Header from "@dcm/components/header/component";
+import Footer from "@dcm/components/footer/component";
 
 interface Props {
   title?: string;

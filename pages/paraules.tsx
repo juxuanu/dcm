@@ -1,7 +1,7 @@
 import React from "react";
-import { DataService, Word } from "@dcm/services";
 import { GetStaticProps } from "next";
-import ListPage from "@dcm/components/list-page";
+import { getWords, Word } from "@dcm/data/data";
+import ListPage from "@dcm/components/list-page/component";
 
 interface Props {
   groupedWords: Word[][];
@@ -12,7 +12,7 @@ const Paraules: React.FC<Props> = (props) => (
 );
 
 export const getStaticProps: GetStaticProps<Props> = async () => ({
-  props: { groupedWords: await DataService.getWords() },
+  props: { groupedWords: await getWords() },
 });
 
 export default Paraules;

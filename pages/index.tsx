@@ -1,15 +1,15 @@
 import React from "react";
-import { Wrapper } from "@dcm/components/wrapper";
-import { Section } from "@dcm/components/section";
 import Link from "next/link";
 import Image from "next/image";
-import { StringPair } from "@dcm/components/string-pair";
-import { LinkedInLogo } from "@dcm/components/linkedin-logo";
-import { InstagramLogo } from "@dcm/components/instagram-logo";
 import llibret1 from "../public/llibret1.jpeg";
 import llibret2 from "../public/llibret2.jpeg";
 import llibret3 from "../public/llibret3.jpeg";
-import { EmailLogo } from "@dcm/components/email-logo";
+import Section from "@dcm/components/section/component";
+import Wrapper from "@dcm/components/wrapper/component";
+import StringPair from "@dcm/components/string-pair/component";
+import LinkedInLogo from "@dcm/components/linkedin-logo/component";
+import InstagramLogo from "@dcm/components/instagram-logo/component";
+import EmailLogo from "@dcm/components/email-logo/component";
 
 const Home: React.FC = () => {
   return (

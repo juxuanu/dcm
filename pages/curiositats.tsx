@@ -1,9 +1,9 @@
 import React from "react";
-import { Wrapper } from "@dcm/components/wrapper";
 import { GetStaticProps } from "next";
-import { Curiosities, DataService } from "@dcm/services";
-import { Section } from "@dcm/components/section";
-import { StringPair } from "@dcm/components/string-pair";
+import { Curiosities, getCuriosities } from "@dcm/data/data";
+import Wrapper from "@dcm/components/wrapper/component";
+import Section from "@dcm/components/section/component";
+import StringPair from "@dcm/components/string-pair/component";
 
 interface Props {
   curiositats: Curiosities;
@@ -110,7 +110,7 @@ const Curiositats: React.FC<Props> = (props) => (
 export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
-      curiositats: DataService.getCuriosities(),
+      curiositats: getCuriosities(),
     },
   };
 };
