@@ -2,6 +2,7 @@ import "@dcm/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Raleway } from "next/font/google";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/corito.png" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </div>
   );
 }
