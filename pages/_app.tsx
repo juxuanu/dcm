@@ -1,9 +1,7 @@
 import "@dcm/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Raleway } from "next/font/google";
-import React from "react";
 import Head from "next/head";
-import Script from 'next/script';
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -25,7 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/corito.png" />
       </Head>
-      <Script src="https://statsy.observer/clr4qfo6e0026aj0twlas4gfk.js"></Script>
       <Component {...pageProps} />
     </div>
   );
