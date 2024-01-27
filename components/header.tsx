@@ -1,11 +1,14 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Button from "@dcm/components/button";
 
-const Header: React.FC = () => {
-  const router = useRouter();
+export type PageType = "paraules" | "curiositats" | "expressions";
 
+interface Props {
+  currentPage?: PageType;
+}
+
+const Header: React.FC = ({ currentPage }: Props) => {
   return (
     <header
       className={`w-full h-32 flex flex-col flex-nowrap justify-center items-center 
@@ -21,21 +24,17 @@ const Header: React.FC = () => {
       <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
         <div>
           <Link href="/paraules">
-            <Button active={router.pathname === "/paraules"}>Paraules</Button>
+            <Button active={currentPage === "paraules"}>Paraules</Button>
           </Link>
         </div>
         <div>
           <Link href="/expressions">
-            <Button active={router.pathname === "/expressions"}>
-              Expressions
-            </Button>
+            <Button active={currentPage === "expressions"}>Expressions</Button>
           </Link>
         </div>
         <div>
           <Link href="/curiositats">
-            <Button active={router.pathname === "/curiositats"}>
-              Curiositats
-            </Button>
+            <Button active={currentPage === "curiositats"}>Curiositats</Button>
           </Link>
         </div>
       </nav>

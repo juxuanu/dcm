@@ -1,7 +1,7 @@
+"use client";
 import React, { useCallback, useMemo, useState } from "react";
 import { Expression, Word } from "@dcm/data/data";
 import { filterSearchTerm } from "./filter-search-term";
-import Wrapper from "@dcm/components/wrapper";
 import Navigator from "@dcm/components/navigator";
 import StringPair from "@dcm/components/string-pair";
 import Section from "@dcm/components/section";
@@ -10,22 +10,21 @@ export type Data = Expression[][] | Word[][];
 
 interface Props {
   groupedData: Data;
-  title: string;
 }
 
-const ListPage: React.FC<Props> = (props) => {
+const ListPage: React.FC<Props> = ({ groupedData }) => {
   const [searchTerm, setSearchTerm] = useState<string | undefined>();
   const shownData = useMemo(
-    () => filterSearchTerm(props.groupedData, searchTerm),
-    [props.groupedData, searchTerm],
+    () => filterSearchTerm(groupedData, searchTerm),
+    [groupedData, searchTerm],
   );
   const onSearch = useCallback((input: string) => setSearchTerm(input), []);
 
   return (
-    <Wrapper title={props.title}>
+    <>
       <Navigator
         onSearch={onSearch}
-        data={props.groupedData.map((i) => i[0].one.charAt(0))}
+        data={groupedData.map((i) => i[0].one.charAt(0))}
       />
       {shownData.map((group) => (
         <Section
@@ -43,7 +42,7 @@ const ListPage: React.FC<Props> = (props) => {
           </ul>
         </Section>
       ))}
-    </Wrapper>
+    </>
   );
 };
 

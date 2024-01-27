@@ -5,15 +5,17 @@ import llibret1 from "../public/llibret1.jpeg";
 import llibret2 from "../public/llibret2.jpeg";
 import llibret3 from "../public/llibret3.jpeg";
 import Section from "@dcm/components/section";
-import Wrapper from "@dcm/components/wrapper";
 import StringPair from "@dcm/components/string-pair";
 import LinkedInLogo from "@dcm/components/linkedin-logo";
 import InstagramLogo from "@dcm/components/instagram-logo";
 import EmailLogo from "@dcm/components/email-logo";
+import Footer from "@dcm/components/footer";
+import Header from "@dcm/components/header";
 
 const Home: React.FC = () => {
   return (
-    <Wrapper>
+    <>
+      <Header />
       <Section title={"Què?"}>
         <p>
           Un recull de curiositats, expressions i paraules mallorquines
@@ -112,7 +114,6 @@ const Home: React.FC = () => {
                 <div className="w-fit h-fit flex flex-row gap-1">
                   <Link
                     href={"https://www.linkedin.com/in/icarns/"}
-                    prefetch={false}
                     target={"_blank"}
                     title={"LinkedIn"}
                   >
@@ -195,7 +196,8 @@ const Home: React.FC = () => {
           </li>
         </ul>
       </Section>
-    </Wrapper>
+      <Footer />
+    </>
   );
 };
 
