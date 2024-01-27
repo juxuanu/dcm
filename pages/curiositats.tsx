@@ -1,9 +1,9 @@
 import React from "react";
 import { GetStaticProps } from "next";
 import { Curiosities, getCuriosities } from "@dcm/data/data";
-import Wrapper from "@dcm/components/wrapper/component";
-import Section from "@dcm/components/section/component";
-import StringPair from "@dcm/components/string-pair/component";
+import Wrapper from "@dcm/components/wrapper";
+import Section from "@dcm/components/section";
+import StringPair from "@dcm/components/string-pair";
 
 interface Props {
   curiositats: Curiosities;

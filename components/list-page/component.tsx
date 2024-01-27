@@ -1,10 +1,10 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Expression, Word } from "@dcm/data/data";
 import { filterSearchTerm } from "./utils";
-import Wrapper from "@dcm/components/wrapper/component";
-import Navigator from "@dcm/components/navigator/component";
-import StringPair from "@dcm/components/string-pair/component";
-import Section from "@dcm/components/section/component";
+import Wrapper from "@dcm/components/wrapper";
+import Navigator from "@dcm/components/navigator";
+import StringPair from "@dcm/components/string-pair";
+import Section from "@dcm/components/section";
 
 export type Data = Expression[][] | Word[][];
 

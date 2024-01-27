@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "@dcm/components/wrapper/component";
+import Wrapper from "@dcm/components/wrapper";
 
 const Custom404: React.FC = () => {
   return (

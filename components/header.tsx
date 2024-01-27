@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Button from "@dcm/components/button/component";
+import Button from "@dcm/components/button";
 
 const Header: React.FC = () => {
   const router = useRouter();
