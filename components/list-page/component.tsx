@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Expression, Word } from "@dcm/data/data";
-import { filterSearchTerm } from "./utils";
+import { filterSearchTerm } from "./filter-search-term";
 import Wrapper from "@dcm/components/wrapper";
 import Navigator from "@dcm/components/navigator";
 import StringPair from "@dcm/components/string-pair";
