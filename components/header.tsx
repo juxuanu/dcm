@@ -8,7 +8,7 @@ interface Props {
   currentPage?: PageType;
 }
 
-const Header: React.FC = ({ currentPage }: Props) => {
+const Header: React.FC<Props> = ({ currentPage }) => {
   return (
     <header
       className={`w-full h-32 flex flex-col flex-nowrap justify-center items-center 

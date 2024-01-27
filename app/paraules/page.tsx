@@ -14,7 +14,7 @@ const Paraules: React.FC = async () => {
 
   return (
     <>
-      <Header />
+      <Header currentPage={"paraules"} />
       <ListPage groupedData={groupedWords} />
       <Footer />
     </>

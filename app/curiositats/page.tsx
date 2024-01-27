@@ -16,7 +16,7 @@ const Curiositats: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header currentPage={"curiositats"} />
       <Section title={"Articles definits"}>
         <ul className="space-y-2">
           {curiositats["articles definits"].llista.map((a) => (

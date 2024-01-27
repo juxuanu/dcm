@@ -14,7 +14,7 @@ const Expressions: React.FC = async () => {
 
   return (
     <>
-      <Header />
+      <Header currentPage={"expressions"} />
       <ListPage groupedData={groupedExpressions} />
       <Footer />
     </>
