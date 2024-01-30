@@ -1,10 +1,10 @@
 import React from "react";
 import { getCuriosities } from "@dcm/data/data";
-import Section from "@dcm/components/section";
-import StringPair from "@dcm/components/string-pair";
+import Section from "@dcm/app/_components/section";
+import StringPair from "@dcm/app/_components/string-pair";
 import { Metadata } from "next";
-import Footer from "@dcm/components/footer";
-import Header from "@dcm/components/header";
+import Footer from "@dcm/app/_components/footer";
+import Header from "@dcm/app/_components/header";
 
 export const metadata: Metadata = {
   title: "Curiositats | MxC",

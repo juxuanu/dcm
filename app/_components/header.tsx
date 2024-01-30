@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Button from "@dcm/components/button";
+import Button from "@dcm/app/_components/button";
 
 export type PageType = "paraules" | "curiositats" | "expressions";
 
