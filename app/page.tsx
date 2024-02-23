@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           className={`w-full h-auto overflow-x-auto flex flex-row flex-nowrap gap-3 my-6
             [&>*]:w-72 [&>*]:h-auto `}
         >
-          <Link href={"/llibret1.jpeg"}>
+          <Link href={"/llibret1.jpeg"} prefetch={false}>
             <Image
               src={llibret1}
               title={"Llibret: vocabulari"}
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
               placeholder={"blur"}
             />
           </Link>
-          <Link href={"/llibret2.jpeg"}>
+          <Link href={"/llibret2.jpeg"} prefetch={false}>
             <Image
               src={llibret2}
               title={"Llibret: portada"}
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
               placeholder={"blur"}
             />
           </Link>
-          <Link href={"/llibret3.jpeg"}>
+          <Link href={"/llibret3.jpeg"} prefetch={false}>
             <Image
               src={llibret3}
               title={"Llibret: paraules"}
