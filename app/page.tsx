@@ -161,6 +161,7 @@ const Home: React.FC = () => {
               href={
                 "https://s3.amazonaws.com/media.ib3alacarta.com/058decc8-4b98-4f6f-b3b4-9b2984825171/da217664-1bdf-11ee-a224-c437725f29d4/DLT8706291.mp4"
               }
+              prefetch={false}
             >
               Cinc dies
             </Link>{" "}
@@ -173,6 +174,7 @@ const Home: React.FC = () => {
               href={
                 "https://s3.amazonaws.com/media.ib3alacarta.com/eeeeb5c0-1941-4e25-884d-91010e713d8d/db3060aa-1737-11ee-a224-c437725f29d4/6-422-121478.mp3"
               }
+              prefetch={false}
             >
               Ràdio
             </Link>{" "}
@@ -184,13 +186,14 @@ const Home: React.FC = () => {
               href={
                 "https://www.arabalears.cat/cultura/catalunya-nyonya-mallorca-xubec-diccionari-mallorquina-fet-catala_1_4740442.html"
               }
+              prefetch={false}
             >
               ARA Balears
             </Link>
           </li>
           <li>
             Revista de Llucmajor:{" "}
-            <Link className="underline" href={"/revista-llucmajor.jpg"}>
+            <Link className="underline" href={"/revista-llucmajor.jpg"} prefetch={false}>
               imprès
             </Link>
           </li>
