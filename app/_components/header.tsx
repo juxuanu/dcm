@@ -11,17 +11,17 @@ interface Props {
 const Header: React.FC<Props> = ({ currentPage }) => {
   return (
     <header
-      className={`w-full h-32 flex flex-col flex-nowrap justify-center items-center 
-        px-4 py-6 mb-6 z-10 
-        fixed top-0 left-0 
-        bg-bookBlue text-neutral-100 dark:text-blue-200 dark:bg-black`}
+      className={`fixed left-0 top-0 z-10 mb-6 flex h-32 
+        w-full flex-col flex-nowrap items-center 
+        justify-center bg-bookBlue px-4 
+        py-6 text-neutral-100 dark:bg-black dark:text-blue-200`}
     >
       <Link href={"/"}>
-        <h1 className="text-2xl text-center mb-4 uppercase font-semibold w-full max-w-4xl whitespace-nowrap">
+        <h1 className="mb-4 w-full max-w-4xl whitespace-nowrap text-center text-2xl font-semibold uppercase">
           Mallorquí per catalans
         </h1>
       </Link>
-      <nav className="flex flex-row flex-nowrap justify-around overflow-y-auto gap-1 w-full max-w-4xl [&>div]:w-fit">
+      <nav className="flex w-full max-w-4xl flex-row flex-nowrap justify-around gap-1 overflow-y-auto [&>div]:w-fit">
         <div>
           <Link href="/paraules">
             <Button active={currentPage === "paraules"}>Paraules</Button>

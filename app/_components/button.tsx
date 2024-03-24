@@ -8,9 +8,9 @@ interface Props extends PropsWithChildren {
 const Button: React.FC<Props> = (props) => {
   return (
     <button
-      className={`px-2 py-0.5 uppercase text-sm ${
+      className={`px-2 py-0.5 text-sm uppercase ${
         props.active &&
-        "font-semibold underline underline-offset-4 decoration-1"
+        "font-semibold underline decoration-1 underline-offset-4"
       } ${props.extraClasses}`}
     >
       {props.children}

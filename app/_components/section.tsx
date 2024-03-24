@@ -12,7 +12,7 @@ const Section: React.FC<PropsWithChildren<Props>> = (props) => {
       <h2
         id={props.id}
         className={
-          "text-xl font-semibold w-full h-fit border-b border-solid border-bookBlue border-opacity-50 mb-3 uppercase scroll-mt-36 " +
+          "mb-3 h-fit w-full scroll-mt-36 border-b border-solid border-bookBlue border-opacity-50 text-xl font-semibold uppercase " +
           props.extraClasses
         }
       >

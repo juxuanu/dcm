@@ -36,8 +36,8 @@ const Home: React.FC = () => {
           .
         </p>
         <div
-          className={`w-full h-auto overflow-x-auto flex flex-row flex-nowrap gap-3 my-6
-            [&>*]:w-72 [&>*]:h-auto `}
+          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto
+            [&>*]:h-auto [&>*]:w-72 `}
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
             <Image
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
             />
           </Link>
         </div>
-        <div className="w-full mt-10 pr-4 text-right border-r-2 border-solid border-bookBlue">
+        <div className="mt-10 w-full border-r-2 border-solid border-bookBlue pr-4 text-right">
           <blockquote className="italic">
             Un recull fet per tu, Ícar, perquè puguis aprendre un poquet més de
             jo.
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
               one={"Disseny"}
               two={"Aina"}
               extraElement={
-                <div className="w-fit h-fit flex flex-row gap-1">
+                <div className="flex h-fit w-fit flex-row gap-1">
                   <Link
                     href={"https://www.linkedin.com/in/ainadelsol/"}
                     prefetch={false}
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
               one={"Programació"}
               two={"Ícar"}
               extraElement={
-                <div className="w-fit h-fit flex flex-row gap-1">
+                <div className="flex h-fit w-fit flex-row gap-1">
                   <Link
                     href={"https://www.linkedin.com/in/icarns/"}
                     target={"_blank"}
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
           </Link>
           .
         </p>
-        <p className={"w-full text-center mt-4"}>
+        <p className={"mt-4 w-full text-center"}>
           &#9888; No s&apos;ha rebut cap tipus d&apos;assistència lingüística i
           no som experts en aquest àmbit.{" "}
           <span className={"invisible md:visible"}>&#9888;</span>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
       </Section>
       <Section title={"On?"} extraClasses="mt-6">
         <p>Aquest projecte ha aparegut en diferents mitjans de comunicació:</p>
-        <ul className="list-disc list-inside">
+        <ul className="list-inside list-disc">
           <li>
             IB3:{" "}
             <Link
@@ -193,7 +193,11 @@ const Home: React.FC = () => {
           </li>
           <li>
             Revista de Llucmajor:{" "}
-            <Link className="underline" href={"/revista-llucmajor.jpg"} prefetch={false}>
+            <Link
+              className="underline"
+              href={"/revista-llucmajor.jpg"}
+              prefetch={false}
+            >
               imprès
             </Link>
           </li>

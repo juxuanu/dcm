@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const NotFound: React.FC = () => {
   return (
-    <div className="w-fit h-fit m-auto text-center text-lg">
+    <div className="m-auto h-fit w-fit text-center text-lg">
       Què fas tu aquí? Aquesta pàgina no existeix. Arruix!
     </div>
   );

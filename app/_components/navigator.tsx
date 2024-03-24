@@ -20,21 +20,21 @@ const Navigator: React.FC<Props> = (props) => {
   }, [inputRef, props, searchMode]);
 
   return (
-    <div className="flex flex-row flex-nowrap w-full h-fit">
+    <div className="flex h-fit w-full flex-row flex-nowrap">
       <div
-        className="h-8 w-8 flex justify-center items-center"
+        className="flex h-8 w-8 items-center justify-center"
         style={{ width: searchMode ? "100%" : "initial" }}
       >
-        <div className="w-fit h-fit pr-2 border-r border-solid border-bookBlue">
+        <div className="h-fit w-fit border-r border-solid border-bookBlue pr-2">
           <div
-            className="w-full h-full flex justify-center items-center cursor-pointer"
+            className="flex h-full w-full cursor-pointer items-center justify-center"
             onClick={() => setSearchMode(!searchMode)}
           >
             <SearchIcon />
           </div>
         </div>
         <input
-          className={`bg-transparent border-b border-bookBlue outline-bookBlue ${
+          className={`border-b border-bookBlue bg-transparent outline-bookBlue ${
             searchMode && "mx-3"
           }`}
           ref={inputRef}
@@ -46,17 +46,17 @@ const Navigator: React.FC<Props> = (props) => {
         />
       </div>
       <div
-        className="w-full h-fit overflow-x-auto"
+        className="h-fit w-full overflow-x-auto"
         style={{ width: searchMode ? 0 : "100%" }}
       >
-        <ul className="mx-auto w-fit h-fit flex flex-row flex-nowrap">
+        <ul className="mx-auto flex h-fit w-fit flex-row flex-nowrap">
           {props.data.map((i) => (
             <li
               key={i}
-              className="uppercase w-8 h-8 overflow-hidden flex justify-center items-center"
+              className="flex h-8 w-8 items-center justify-center overflow-hidden uppercase"
             >
               <a href={`#${i}`}>
-                <div className="w-fit h-fit">
+                <div className="h-fit w-fit">
                   <Button
                     active={false}
                     extraClasses="flex justify-center items-center"

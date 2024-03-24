@@ -9,6 +9,6 @@ const svg = (
   </svg>
 );
 
-const LinkedInLogo: React.FC = () => <div className="w-6 h-6">{svg}</div>;
+const LinkedInLogo: React.FC = () => <div className="h-6 w-6">{svg}</div>;
 
 export default LinkedInLogo;

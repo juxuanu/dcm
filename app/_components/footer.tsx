@@ -25,8 +25,8 @@ const corito = (
 );
 
 const Footer: React.FC = () => (
-  <footer className="w-full h-fit max-w-4xl mx-auto mt-8 mb-10">
-    <div className="w-7 h-auto mx-auto flex flex-row flex-nowrap content-center justify-center">
+  <footer className="mx-auto mb-10 mt-8 h-fit w-full max-w-4xl">
+    <div className="mx-auto flex h-auto w-7 flex-row flex-nowrap content-center justify-center">
       {corito}
     </div>
   </footer>

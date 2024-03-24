@@ -26,17 +26,17 @@ const Curiositats: React.FC = () => {
           ))}
         </ul>
         <div className="mt-3">
-          <h3 className="text-lg h-fit mt-4 mb-2 font-medium uppercase">
+          <h3 className="mb-2 mt-4 h-fit text-lg font-medium uppercase">
             Excepcions
           </h3>
-          <p className="first-letter:capitalize mb-2">
+          <p className="mb-2 first-letter:capitalize">
             {curiositats["articles definits"].notes["1"].text}.
           </p>
           <div>
-            <p className="first-letter:capitalize mb-2">
+            <p className="mb-2 first-letter:capitalize">
               {curiositats["articles definits"].notes["2"].text}.
             </p>
-            <ul className="space-y-2 ml-2 list-inside list-disc">
+            <ul className="ml-2 list-inside list-disc space-y-2">
               {curiositats["articles definits"].notes["2"].llista.map((i) => {
                 const split = i.split(":");
                 if (split.length === 1)
@@ -68,7 +68,7 @@ const Curiositats: React.FC = () => {
         </ul>
       </Section>
       <Section title={"Pronúncia"} extraClasses={"mt-6"}>
-        <p className="first-letter:uppercase mb-4">
+        <p className="mb-4 first-letter:uppercase">
           {curiositats.pronúncia.text}.
         </p>
         <ul className="space-y-2">
