@@ -20,9 +20,10 @@ const Curiositats: React.FC = () => {
       <Section title={"Articles definits"}>
         <ul className="space-y-2">
           {curiositats["articles definits"].llista.map((a) => (
-            <StringPair key={a.ca} one={a.ca} two={a.ma} />
+            <li key={a.ca}>
+              <StringPair one={a.ca} two={a.ma} />
+            </li>
           ))}
-          <li></li>
         </ul>
         <div className="mt-3">
           <h3 className="text-lg h-fit mt-4 mb-2 font-medium uppercase">

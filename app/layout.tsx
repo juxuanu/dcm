@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ca">
       <body
         className={
-          "text-bookBlue bg-neutral-100 dark:bg-black dark:text-blue-200 " +
+          "text-bookBlue bg-neutral-100 dark:bg-black dark:text-blue-200 text-base " +
           raleway.className
         }
       >
