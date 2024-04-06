@@ -40,7 +40,8 @@ const Navigator: React.FC<Props> = (props) => {
           ref={inputRef}
           style={{ width: searchMode ? "100%" : 0 }}
           tabIndex={searchMode ? 1 : -1}
-          role="search"
+          role="searchbox"
+          aria-roledescription="buscador de paraules i descripcions"
           onChange={(event) => props.onSearch(event.currentTarget.value)}
           placeholder="això"
         />
