@@ -21,7 +21,7 @@
   "devDependencies": {
     "@swc/cli": "^0.3.12",
     "@swc/core": "^1.4.14",
-    "@types/node": "18.19.26",
+    "@types/node": "18.19.31",
     "@types/react": "18.2.73",
     "@types/react-dom": "18.2.24",
     "autoprefixer": "10.4.19",
