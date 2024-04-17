@@ -4,13 +4,13 @@ import Image from "next/image";
 import llibret1 from "../public/llibret1.jpeg";
 import llibret2 from "../public/llibret2.jpeg";
 import llibret3 from "../public/llibret3.jpeg";
-import Section from "@dcm/app/_components/section";
-import StringPair from "@dcm/app/_components/string-pair";
-import LinkedInLogo from "@dcm/app/_components/linkedin-logo";
-import InstagramLogo from "@dcm/app/_components/instagram-logo";
-import EmailLogo from "@dcm/app/_components/email-logo";
-import Footer from "@dcm/app/_components/footer";
-import Header from "@dcm/app/_components/header";
+import Section from "@dcm/components/section";
+import StringPair from "@dcm/components/string-pair";
+import LinkedInLogo from "@dcm/components/linkedin-logo";
+import InstagramLogo from "@dcm/components/instagram-logo";
+import EmailLogo from "@dcm/components/email-logo";
+import Footer from "@dcm/components/footer";
+import Header from "@dcm/components/header";
 
 const Home: React.FC = () => {
   return (

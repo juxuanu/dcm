@@ -1,6 +1,6 @@
 import React, { createRef, useEffect, useState } from "react";
-import SearchIcon from "@dcm/app/_components/search-icon";
-import Button from "@dcm/app/_components/button";
+import SearchIcon from "@dcm/components/search-icon";
+import Button from "@dcm/components/button";
 
 interface Props {
   data: string[];

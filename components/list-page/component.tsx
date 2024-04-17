@@ -2,9 +2,9 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Expression, Word } from "@dcm/data/data";
 import { filterSearchTerm } from "./filter-search-term";
-import Navigator from "@dcm/app/_components/navigator";
-import StringPair from "@dcm/app/_components/string-pair";
-import Section from "@dcm/app/_components/section";
+import Navigator from "@dcm/components/navigator";
+import StringPair from "@dcm/components/string-pair";
+import Section from "@dcm/components/section";
 
 export type Data = Expression[][] | Word[][];
 
