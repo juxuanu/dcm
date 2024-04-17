@@ -16,24 +16,24 @@ const Header: React.FC<Props> = ({ currentPage }) => {
         justify-center bg-bookBlue px-4 
         py-6 text-neutral-100 dark:bg-black dark:text-blue-200`}
     >
-      <Link href={"/"}>
+      <Link href={{ pathname: "/" }}>
         <h1 className="mb-4 w-full max-w-4xl whitespace-nowrap text-center text-2xl font-semibold uppercase">
           Mallorquí per catalans
         </h1>
       </Link>
       <nav className="flex w-full max-w-4xl flex-row flex-nowrap justify-around gap-1 overflow-y-auto [&>div]:w-fit">
         <div>
-          <Link href="/paraules">
+          <Link href={{ pathname: "paraules" }}>
             <Button active={currentPage === "paraules"}>Paraules</Button>
           </Link>
         </div>
         <div>
-          <Link href="/expressions">
+          <Link href={{ pathname: "expressions" }}>
             <Button active={currentPage === "expressions"}>Expressions</Button>
           </Link>
         </div>
         <div>
-          <Link href="/curiositats">
+          <Link href={{ pathname: "curiositats" }}>
             <Button active={currentPage === "curiositats"}>Curiositats</Button>
           </Link>
         </div>
