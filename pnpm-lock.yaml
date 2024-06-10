@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^1.5.24
     version: 1.5.24
   '@types/node':
-    specifier: 18.19.33
-    version: 18.19.33
+    specifier: 18.19.34
+    version: 18.19.34
   '@types/react':
     specifier: 18.3.3
     version: 18.3.3
@@ -689,7 +689,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
       '@types/responselike': 1.0.3
     dev: true
 
@@ -704,11 +704,11 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
     dev: true
 
-  /@types/node@18.19.33:
-    resolution: {integrity: sha512-NR9+KrpSajr2qBVp/Yt5TU/rp+b5Mayi3+OlMlcg2cVCfRmcG5PWZ7S4+MG9PZ5gWBoc9Pd0BKSRViuBCRPu0A==}
+  /@types/node@18.19.34:
+    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -733,7 +733,7 @@ packages:
   /@types/responselike@1.0.3:
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
     dev: true
 
   /@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5):
