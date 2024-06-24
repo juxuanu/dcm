@@ -32,8 +32,8 @@ dependencies:
 
 devDependencies:
   '@swc/cli':
-    specifier: ^0.3.12
-    version: 0.3.12(@swc/core@1.6.1)
+    specifier: ^0.3.14
+    version: 0.3.14(@swc/core@1.6.1)
   '@swc/core':
     specifier: ^1.6.1
     version: 1.6.1
@@ -519,8 +519,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@swc/cli@0.3.12(@swc/core@1.6.1):
-    resolution: {integrity: sha512-h7bvxT+4+UDrLWJLFHt6V+vNAcUNii2G4aGSSotKz1ECEk4MyEh5CWxmeSscwuz5K3i+4DWTgm4+4EyMCQKn+g==}
+  /@swc/cli@0.3.14(@swc/core@1.6.1):
+    resolution: {integrity: sha512-0vGqD6FSW67PaZUZABkA+ADKsX7OUY/PwNEz1SbQdCvVk/e4Z36Gwh7mFVBQH9RIsMonTyhV1RHkwkGnEfR3zQ==}
     engines: {node: '>= 16.14.0'}
     hasBin: true
     peerDependencies:
