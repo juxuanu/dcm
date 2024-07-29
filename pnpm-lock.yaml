@@ -40,8 +40,8 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(@swc/helpers@0.5.5)
       '@types/node':
-        specifier: 18.19.41
-        version: 18.19.41
+        specifier: 22.0.0
+        version: 22.0.0
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -448,8 +448,8 @@ packages:
   '@types/keyv@3.1.4':
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
 
-  '@types/node@18.19.41':
-    resolution: {integrity: sha512-LX84pRJ+evD2e2nrgYCHObGWkiQJ1mL+meAgbvnwk/US6vmMY7S2ygBTGV2Jw91s9vUsLSXeDEkUHZIJGLrhsg==}
+  '@types/node@22.0.0':
+    resolution: {integrity: sha512-VT7KSYudcPOzP5Q0wfbowyNLaVR8QWUdw+088uFWwfvpY6uCWaXpqV6ieLAu9WBcnTa7H4Z5RLK8I5t2FuOcqw==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -2150,8 +2150,8 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  undici-types@6.11.1:
+    resolution: {integrity: sha512-mIDEX2ek50x0OlRgxryxsenE5XaQD4on5U2inY7RApK3SOJpofyw7uW2AyfMKkhAxXIceo2DeWGVGwyvng1GNQ==}
 
   update-browserslist-db@1.0.13:
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
@@ -2512,7 +2512,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 18.19.41
+      '@types/node': 22.0.0
       '@types/responselike': 1.0.3
 
   '@types/http-cache-semantics@4.0.4': {}
@@ -2521,11 +2521,11 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 18.19.41
+      '@types/node': 22.0.0
 
-  '@types/node@18.19.41':
+  '@types/node@22.0.0':
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.11.1
 
   '@types/prop-types@15.7.12': {}
 
@@ -2540,7 +2540,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 18.19.41
+      '@types/node': 22.0.0
 
   '@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.3)':
     dependencies:
@@ -4407,7 +4407,7 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
-  undici-types@5.26.5: {}
+  undici-types@6.11.1: {}
 
   update-browserslist-db@1.0.13(browserslist@4.23.0):
     dependencies:
