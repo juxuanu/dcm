@@ -4,7 +4,13 @@ import { Raleway } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/globals.css";
-import { description, keywords, title, url } from "@dcm/app/_site-config";
+import {
+  authors,
+  description,
+  keywords,
+  title,
+  url,
+} from "@dcm/app/_site-config";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -12,23 +18,17 @@ export const metadata: Metadata = {
   title,
   keywords,
   description,
+  authors,
   openGraph: {
     siteName: title,
     countryName: "Països Catalans",
     title,
-    authors: ["Aina Delgado", "Ícar N. S."],
+    authors: authors.map((author) => author.name),
     url,
     description,
     locale: "ca",
     tags: keywords,
   },
-  authors: [
-    {
-      name: "Aina Delgado",
-      url: new URL("https://www.instagram.com/ainadelsol/"),
-    },
-    { name: "Ícar N. S.", url: new URL("https://icarns.xyz") },
-  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
