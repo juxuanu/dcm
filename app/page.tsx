@@ -36,8 +36,7 @@ const Home: React.FC = () => {
           .
         </p>
         <div
-          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto
-            [&>*]:h-auto [&>*]:w-72 `}
+          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto [&>*]:h-auto [&>*]:w-72`}
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
             <Image
@@ -161,6 +160,7 @@ const Home: React.FC = () => {
               href={
                 "https://s3.amazonaws.com/media.ib3alacarta.com/058decc8-4b98-4f6f-b3b4-9b2984825171/da217664-1bdf-11ee-a224-c437725f29d4/DLT8706291.mp4"
               }
+              target={"_blank"}
               prefetch={false}
             >
               Cinc dies
@@ -171,6 +171,7 @@ const Home: React.FC = () => {
             IB3:{" "}
             <Link
               className="underline"
+              target={"_blank"}
               href={
                 "https://s3.amazonaws.com/media.ib3alacarta.com/eeeeb5c0-1941-4e25-884d-91010e713d8d/db3060aa-1737-11ee-a224-c437725f29d4/6-422-121478.mp3"
               }
@@ -183,6 +184,7 @@ const Home: React.FC = () => {
           <li>
             <Link
               className="underline"
+              target={"_blank"}
               href={
                 "https://www.arabalears.cat/cultura/catalunya-nyonya-mallorca-xubec-diccionari-mallorquina-fet-catala_1_4740442.html"
               }
@@ -199,6 +201,18 @@ const Home: React.FC = () => {
               prefetch={false}
             >
               imprès
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="underline"
+              target={"_blank"}
+              href={
+                "https://www.elnacional.cat/ca/estil-vida/paraules-diferents-mallorqui-catala_1260374_102.html"
+              }
+              prefetch={false}
+            >
+              El Nacional
             </Link>
           </li>
         </ul>
