@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next-export-optimize-images/image";
+import Picture from "next-export-optimize-images/picture";
 import llibret1 from "../public/llibret1.jpeg";
 import llibret2 from "../public/llibret2.jpeg";
 import llibret3 from "../public/llibret3.jpeg";
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto [&>*]:h-auto [&>*]:w-72`}
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
-            <Image
+            <Picture
               src={llibret1}
               title={"Llibret: vocabulari"}
               alt={"Llibret: vocabulari"}
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
             />
           </Link>
           <Link href={"/llibret2.jpeg"} prefetch={false}>
-            <Image
+            <Picture
               src={llibret2}
               title={"Llibret: portada"}
               alt={"Llibret: portada"}
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             />
           </Link>
           <Link href={"/llibret3.jpeg"} prefetch={false}>
-            <Image
+            <Picture
               src={llibret3}
               title={"Llibret: paraules"}
               alt={"Llibret: paraules"}
