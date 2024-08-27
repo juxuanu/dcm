@@ -9,7 +9,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mallorquí per catalans",
-  keywords: ["mallorquí", "català", "diccionari", "expressions", "curiositats"],
+  keywords: ["mallorquí", "català", "expressions", "curiositats"],
   description: "Mallorquí per catalans: expressions, paraules i curiositats.",
   authors: [
     {
