@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { getWords } from "@dcm/data/data";
 import ListPage from "@dcm/components/list-page/component";
 import { Metadata } from "next";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Paraules | MxC",
 };
 
-const Paraules: React.FC = async () => {
+const Paraules: FC = async () => {
   const groupedWords = await getWords();
 
   return (

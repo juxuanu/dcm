@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 const corito = (
   <svg
@@ -26,7 +26,7 @@ const corito = (
   </svg>
 );
 
-const Footer: React.FC = () => (
+const Footer: FC = () => (
   <footer className="mx-auto mb-10 mt-8 h-fit w-full max-w-4xl">
     <div className="mx-auto flex h-auto w-7 flex-row flex-nowrap content-center justify-center">
       {corito}
