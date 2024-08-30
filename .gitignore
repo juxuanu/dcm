@@ -34,5 +34,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# jetbrain settings
-.idea
+# Webstorm IDE config
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+.idea/**/*.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/aws.xml
