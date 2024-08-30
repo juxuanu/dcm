@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Curiositats | MxC",
 };
 
-// noinspection JSNonASCIINames,NonAsciiCharacters
 const Curiositats: React.FC = () => {
   const curiositats = getCuriosities();
 

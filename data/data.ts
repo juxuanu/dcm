@@ -23,7 +23,6 @@ export interface Curiosities {
   "maneres de dir": {
     llista: { concepte: string; paraules: string }[];
   };
-  // noinspection JSNonASCIINames,NonAsciiCharacters
   pronúncia: {
     text: string;
     llista: string[];
