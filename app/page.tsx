@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import Link from "next/link";
 import Picture from "next-export-optimize-images/picture";
 import llibret1 from "../public/llibret1.jpeg";
@@ -12,7 +12,7 @@ import EmailLogo from "@dcm/components/email-logo";
 import Footer from "@dcm/components/footer";
 import Header from "@dcm/components/header";
 
-const Home: React.FC = () => {
+const Home: FC = () => {
   return (
     <>
       <Header />

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 const svg = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
@@ -9,6 +9,6 @@ const svg = (
   </svg>
 );
 
-const InstagramLogo: React.FC = () => <div className="h-6 w-6">{svg}</div>;
+const InstagramLogo: FC = () => <div className="h-6 w-6">{svg}</div>;
 
 export default InstagramLogo;

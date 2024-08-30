@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const SearchIcon: React.FC = () => (
+const SearchIcon: FC = () => (
   <div className="h-4 w-4">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path

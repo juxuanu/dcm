@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 const svg = (
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -9,6 +9,6 @@ const svg = (
   </svg>
 );
 
-const EmailLogo: React.FC = () => <div className="h-6 w-6">{svg}</div>;
+const EmailLogo: FC = () => <div className="h-6 w-6">{svg}</div>;
 
 export default EmailLogo;

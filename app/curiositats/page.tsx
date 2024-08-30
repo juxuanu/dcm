@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { getCuriosities } from "@dcm/data/data";
 import Section from "@dcm/components/section";
 import StringPair from "@dcm/components/string-pair";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Curiositats | MxC",
 };
 
-const Curiositats: React.FC = () => {
+const Curiositats: FC = () => {
   const curiositats = getCuriosities();
 
   return (

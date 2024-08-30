@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pàgina inexistent",
 };
 
-const NotFound: React.FC = () => {
+const NotFound: FC = () => {
   return (
     <div className="m-auto h-fit w-fit text-center text-lg">
       Què fas tu aquí? Aquesta pàgina no existeix. Arruix!
