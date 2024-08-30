@@ -1,4 +1,3 @@
-import * as fs from "fs";
 import { readFileSync } from "fs";
 import {
   filter,
@@ -45,19 +44,18 @@ let curiositiesCache: Curiosities | undefined;
 let expressionsCache: Expression[][] | undefined;
 let wordsCache: Word[][] | undefined;
 
-const dataPaths = {
+export const dataPaths = {
   curiosities: "data/curiosities.json",
   words: "data/words.csv",
   expressions: "data/expressions.csv",
 } as const;
 
-const parseCsv = async (
-  path: string,
+export const parseCsv = async (
+  fileContent: string,
   delimiter: string = ";",
 ): Promise<[string, string][][]> => {
-  const fileData = readFileSync(path, { encoding: "utf-8" });
   return lastValueFrom(
-    from(fileData.split("\n")).pipe(
+    from(fileContent.split("\n")).pipe(
       filter((line) => !!line && line.length > 0 && line.includes(delimiter)),
       map((line): [string, string] => {
         const split = line.split(delimiter);
@@ -83,21 +81,25 @@ const buildDataPairs = (data: [string, string][][]): DataPair[][] =>
 export const getWords = async (): Promise<Word[][]> => {
   if (wordsCache) return wordsCache;
 
-  wordsCache = buildDataPairs(await parseCsv(dataPaths.words));
+  wordsCache = buildDataPairs(
+    await parseCsv(readFileSync(dataPaths.words, { encoding: "utf-8" })),
+  );
   return wordsCache;
 };
 
 export const getExpressions = async (): Promise<Expression[][]> => {
   if (expressionsCache) return expressionsCache;
 
-  expressionsCache = buildDataPairs(await parseCsv(dataPaths.expressions));
+  expressionsCache = buildDataPairs(
+    await parseCsv(readFileSync(dataPaths.expressions, { encoding: "utf-8" })),
+  );
   return expressionsCache;
 };
 
 export const getCuriosities = (): Curiosities => {
   if (curiositiesCache) return curiositiesCache;
 
-  const fileContents = fs.readFileSync(dataPaths.curiosities, {
+  const fileContents = readFileSync(dataPaths.curiosities, {
     encoding: "utf-8",
   });
   curiositiesCache = JSON.parse(fileContents) as Curiosities;
