@@ -30,8 +30,8 @@ jobs:
       - name: Install Node.js dependencies
         run: pnpm install
 
-      - name: Lint Action
-        uses: wearerequired/lint-action@v2.3.0
-        with:
-          eslint: true
-          prettier: true
+      - name: ESLint
+        run: eslint
+
+      - name: Prettier
+        run: prettier -c .
