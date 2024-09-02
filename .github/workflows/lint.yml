@@ -31,7 +31,7 @@ jobs:
         run: pnpm install
 
       - name: ESLint
-        run: eslint
+        run: pnpm eslint
 
       - name: Prettier
-        run: prettier -c .
+        run: pnpm prettier -c .
