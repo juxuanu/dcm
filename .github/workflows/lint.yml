@@ -30,8 +30,5 @@ jobs:
       - name: Install Node.js dependencies
         run: pnpm install
 
-      - name: ESLint
-        run: pnpm eslint
-
-      - name: Prettier
-        run: pnpm prettier -c .
+      - name: Execute lint script
+        run: pnpm run lint
