@@ -1,0 +1,4 @@
+{
+  "extends": ["next/core-web-vitals", "eslint:recommended"],
+  "ignorePatterns": [".github", "node_modules", "out", "next-env.d.ts"]
+}
