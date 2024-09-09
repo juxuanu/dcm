@@ -11,7 +11,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",
-    "next": "14.2.7",
+    "next": "14.2.8",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rxjs": "^7.8.1",
@@ -20,20 +20,20 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.10.0",
     "@swc/cli": "^0.4.0",
-    "@swc/core": "^1.7.23",
-    "@types/node": "18.19.49",
+    "@swc/core": "^1.7.24",
+    "@types/node": "18.19.50",
     "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.20",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.7",
+    "eslint-config-next": "14.2.8",
     "next-export-optimize-images": "^4.5.0",
     "postcss": "8.4.45",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
-    "typescript": "5.5.4"
+    "typescript": "5.6.2"
   },
   "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }
