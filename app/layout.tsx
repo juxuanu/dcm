@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ca">
       <body
         className={
-          "bg-neutral-100 text-base text-bookBlue dark:bg-black dark:text-blue-200 " +
+          "antialiased bg-neutral-100 scroll-smooth text-base text-bookBlue dark:bg-black dark:text-blue-200 " +
           raleway.className
         }
       >
