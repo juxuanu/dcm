@@ -20,11 +20,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.11.0",
+    "@eslint/js": "^9.11.1",
     "@swc/cli": "^0.4.0",
     "@swc/core": "^1.7.26",
-    "@types/node": "18.19.50",
-    "@types/react": "18.3.8",
+    "@types/node": "18.19.54",
+    "@types/react": "18.3.10",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.20",
     "eslint": "8.57.1",
@@ -32,7 +32,7 @@
     "next-export-optimize-images": "^4.5.0",
     "postcss": "8.4.47",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "typescript": "5.6.2"
   },
   "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
