@@ -9,7 +9,7 @@
     "lint": "next lint && prettier -c . && eslint"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.4.0",
+    "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "next": "15.0.3",
     "react": "18.3.1",
@@ -21,8 +21,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.15.0",
-    "@swc/cli": "0.5.0",
-    "@swc/core": "^1.9.2",
+    "@swc/cli": "0.5.1",
+    "@swc/core": "^1.9.3",
     "@types/node": "22.8.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
@@ -33,8 +33,8 @@
     "next-export-optimize-images": "^4.5.2",
     "postcss": "8.4.49",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "typescript": "5.6.3"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "typescript": "5.7.2"
   },
   "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
 }
