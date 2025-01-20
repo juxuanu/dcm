@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description,
     locale: "ca",
     tags: keywords,
+    images: `${url}/llibret1.jpeg`,
   },
 };
 
