@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 
 const corito = (
   <svg
@@ -11,6 +11,7 @@ const corito = (
     enableBackground="new 0 0 19.21 17.25"
     xmlSpace="preserve"
   >
+    <title>Cor</title>
     <g>
       <path
         className="fill-book-blue dark:fill-blue-200"

@@ -1,5 +1,5 @@
-import { MetadataRoute } from "next";
 import { url } from "@dcm/app/_site-config";
+import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 

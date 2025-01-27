@@ -1,10 +1,11 @@
 "use client";
-import React, { useCallback, useMemo, useState } from "react";
-import { Expression, Word } from "@dcm/data/data";
-import { filterSearchTerm } from "./filter-search-term";
 import Navigator from "@dcm/components/navigator";
-import StringPair from "@dcm/components/string-pair";
 import Section from "@dcm/components/section";
+import StringPair from "@dcm/components/string-pair";
+import type { Expression, Word } from "@dcm/data/data";
+import type React from "react";
+import { useCallback, useMemo, useState } from "react";
+import { filterSearchTerm } from "./filter-search-term";
 
 export type Data = Expression[][] | Word[][];
 

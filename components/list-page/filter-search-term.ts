@@ -1,4 +1,4 @@
-import { Data } from "./component";
+import type { Data } from "./component";
 
 export function filterSearchTerm(
   data: Data,
@@ -21,5 +21,5 @@ function normalize(input: string): string {
   return input
     .toLocaleLowerCase("ca-ES")
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+    .replace(/\p{Diacritic}/gu, "");
 }

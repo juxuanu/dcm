@@ -1,5 +1,6 @@
-import * as fs from "fs";
-import { readFileSync } from "fs";
+import { randomUUID } from "node:crypto";
+import * as fs from "node:fs";
+import { readFileSync } from "node:fs";
 import {
   filter,
   from,
@@ -9,7 +10,6 @@ import {
   mergeMap,
   toArray,
 } from "rxjs";
-import { randomUUID } from "crypto";
 
 export interface Curiosities {
   "articles definits": {
@@ -53,7 +53,7 @@ const dataPaths = {
 
 const parseCsv = async (
   path: string,
-  delimiter: string = ";",
+  delimiter = ";",
 ): Promise<[string, string][][]> => {
   const fileData = readFileSync(path, { encoding: "utf-8" });
   return lastValueFrom(

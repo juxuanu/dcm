@@ -1,16 +1,16 @@
-import { FC } from "react";
-import Link from "next/link";
-import Picture from "next-export-optimize-images/picture";
-import llibret1 from "../public/llibret1.jpeg";
-import llibret2 from "../public/llibret2.jpeg";
-import llibret3 from "../public/llibret3.jpeg";
-import Section from "@dcm/components/section";
-import StringPair from "@dcm/components/string-pair";
-import LinkedInLogo from "@dcm/components/linkedin-logo";
-import InstagramLogo from "@dcm/components/instagram-logo";
 import EmailLogo from "@dcm/components/email-logo";
 import Footer from "@dcm/components/footer";
 import Header from "@dcm/components/header";
+import InstagramLogo from "@dcm/components/instagram-logo";
+import LinkedInLogo from "@dcm/components/linkedin-logo";
+import Section from "@dcm/components/section";
+import StringPair from "@dcm/components/string-pair";
+import Picture from "next-export-optimize-images/picture";
+import Link from "next/link";
+import type { FC } from "react";
+import llibret1 from "../public/llibret1.jpeg";
+import llibret2 from "../public/llibret2.jpeg";
+import llibret3 from "../public/llibret3.jpeg";
 
 const Home: FC = () => {
   return (
@@ -36,7 +36,9 @@ const Home: FC = () => {
           .
         </p>
         <div
-          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto *:h-auto *:w-72`}
+          className={
+            "my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto *:h-auto *:w-72"
+          }
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
             <Picture

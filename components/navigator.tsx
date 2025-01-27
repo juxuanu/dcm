@@ -1,10 +1,10 @@
-import React, { createRef, useEffect, useState } from "react";
-import SearchIcon from "@dcm/components/search-icon";
 import Button from "@dcm/components/button";
+import SearchIcon from "@dcm/components/search-icon";
+import type React from "react";
+import { createRef, useEffect, useState } from "react";
 
 interface Props {
   data: string[];
-  // eslint-disable-next-line no-unused-vars
   onSearch: (searchTerm: string) => void;
 }
 
@@ -29,6 +29,7 @@ const Navigator: React.FC<Props> = (props) => {
           <div
             className="flex h-full w-full cursor-pointer items-center justify-center"
             onClick={() => setSearchMode(!searchMode)}
+            onKeyDown={() => setSearchMode(!searchMode)}
           >
             <SearchIcon />
           </div>
@@ -51,18 +52,18 @@ const Navigator: React.FC<Props> = (props) => {
         style={{ width: searchMode ? 0 : "100%" }}
       >
         <ul className="mx-auto flex h-fit w-fit flex-row flex-nowrap">
-          {props.data.map((i) => (
+          {props.data.map((value) => (
             <li
-              key={i}
+              key={value}
               className="flex h-8 w-8 items-center justify-center overflow-hidden uppercase"
             >
-              <a href={`#${i}`}>
+              <a href={`#${value}`}>
                 <div className="h-fit w-fit">
                   <Button
                     active={false}
-                    extraClasses="flex justify-center items-center"
+                    extraClasses="flex justify-center items-center cursor-pointer"
                   >
-                    {i}
+                    {value}
                   </Button>
                 </div>
               </a>

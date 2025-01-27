@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { getWords } from "@dcm/data/data";
-import ListPage from "@dcm/components/list-page/component";
-import { Metadata } from "next";
 import Footer from "@dcm/components/footer";
 import Header from "@dcm/components/header";
+import ListPage from "@dcm/components/list-page/component";
+import { getWords } from "@dcm/data/data";
+import type { Metadata } from "next";
+import type { FC } from "react";
 
 export const metadata: Metadata = {
   title: "Paraules | MxC",
