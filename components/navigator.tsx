@@ -25,7 +25,7 @@ const Navigator: React.FC<Props> = (props) => {
         className="flex h-8 w-8 items-center justify-center"
         style={{ width: searchMode ? "100%" : "initial" }}
       >
-        <div className="h-fit w-fit border-r border-solid border-bookBlue pr-2">
+        <div className="border-book-blue h-fit w-fit border-r border-solid pr-2">
           <div
             className="flex h-full w-full cursor-pointer items-center justify-center"
             onClick={() => setSearchMode(!searchMode)}
@@ -34,7 +34,7 @@ const Navigator: React.FC<Props> = (props) => {
           </div>
         </div>
         <input
-          className={`border-b border-bookBlue bg-transparent outline-bookBlue ${
+          className={`border-book-blue outline-book-blue border-b bg-transparent ${
             searchMode && "mx-3"
           }`}
           ref={inputRef}

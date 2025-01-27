@@ -11,10 +11,10 @@ interface Props {
 const Header: FC<Props> = ({ currentPage }) => {
   return (
     <header
-      className={`fixed left-0 top-0 z-10 mb-6 flex h-32 w-full flex-col flex-nowrap items-center justify-center bg-bookBlue px-4 py-6 text-neutral-100 dark:bg-black dark:text-blue-200`}
+      className={`bg-book-blue fixed top-0 left-0 z-10 mb-6 flex h-32 w-full flex-col flex-nowrap items-center justify-center px-4 py-6 text-neutral-100 dark:bg-black dark:text-blue-200`}
     >
       <Link href={{ pathname: "/" }}>
-        <h1 className="mb-4 w-full max-w-4xl whitespace-nowrap text-center text-2xl font-semibold uppercase">
+        <h1 className="mb-4 w-full max-w-4xl text-center text-2xl font-semibold whitespace-nowrap uppercase">
           Mallorquí per catalans
         </h1>
       </Link>

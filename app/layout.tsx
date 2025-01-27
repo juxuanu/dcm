@@ -37,11 +37,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ca">
       <body
         className={
-          "scroll-smooth bg-neutral-100 text-base text-bookBlue antialiased dark:bg-black dark:text-blue-200 " +
+          "text-book-blue scroll-smooth bg-neutral-100 text-base antialiased dark:bg-black dark:text-blue-200 " +
           raleway.className
         }
       >
-        <main className="mx-auto mb-12 mt-36 max-w-4xl px-4">{children}</main>
+        <main className="mx-auto mt-36 mb-12 max-w-4xl px-4">{children}</main>
         <Analytics />
         <SpeedInsights />
       </body>

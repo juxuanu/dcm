@@ -36,7 +36,7 @@ const Home: FC = () => {
           .
         </p>
         <div
-          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto [&>*]:h-auto [&>*]:w-72`}
+          className={`my-6 flex h-auto w-full flex-row flex-nowrap gap-3 overflow-x-auto *:h-auto *:w-72`}
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
             <Picture
@@ -63,7 +63,7 @@ const Home: FC = () => {
             />
           </Link>
         </div>
-        <div className="mt-10 w-full border-r-2 border-solid border-bookBlue pr-4 text-right">
+        <div className="border-book-blue mt-10 w-full border-r-2 border-solid pr-4 text-right">
           <blockquote className="italic">
             Un recull fet per tu, Ícar, perquè puguis aprendre un poquet més de
             jo.

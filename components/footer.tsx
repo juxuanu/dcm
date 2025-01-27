@@ -13,7 +13,7 @@ const corito = (
   >
     <g>
       <path
-        className="fill-bookBlue dark:fill-blue-200"
+        className="fill-book-blue dark:fill-blue-200"
         d="M19.122,4.853
 		c-0.571-4.542-6.469-6.611-9.489-2.982C9.622,1.884,9.61,1.898,9.598,1.912C6.74-1.558,1.117,0.011,0.197,4.381
 		C0.082,4.793-0.009,5.505-0.096,5.93H0.01V6.5l0.043,0.208c0.636,4.291,4.775,6.676,7.598,9.345
@@ -27,7 +27,7 @@ const corito = (
 );
 
 const Footer: FC = () => (
-  <footer className="mx-auto mb-10 mt-8 h-fit w-full max-w-4xl">
+  <footer className="mx-auto mt-8 mb-10 h-fit w-full max-w-4xl">
     <div className="mx-auto flex h-auto w-7 flex-row flex-nowrap content-center justify-center">
       {corito}
     </div>
