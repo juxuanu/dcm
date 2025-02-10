@@ -9,21 +9,21 @@
     "lint": "biome lint"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.0.3",
-    "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
+    "@tailwindcss/postcss": "^4.0.6",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "babel-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
     "next": "15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "rxjs": "^7.8.1",
     "sharp": "^0.33.5",
-    "tailwindcss": "4.0.3"
+    "tailwindcss": "4.0.6"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "0.6.0",
-    "@swc/core": "^1.10.12",
+    "@swc/core": "^1.10.15",
     "@types/node": "22.8.1",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
