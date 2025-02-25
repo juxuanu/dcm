@@ -19,7 +19,7 @@
     "react-dom": "19.0.0",
     "rxjs": "^7.8.2",
     "sharp": "^0.33.5",
-    "tailwindcss": "4.0.8"
+    "tailwindcss": "4.0.9"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
