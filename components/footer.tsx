@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import React from "react";
 
 const corito = (
   <svg

@@ -1,4 +1,5 @@
-import { cn } from "@dcm/styles/cn";
+import React from "react";
+import { cn } from "../styles/cn.ts";
 import type { FC, PropsWithChildren } from "react";
 
 interface Props extends PropsWithChildren {

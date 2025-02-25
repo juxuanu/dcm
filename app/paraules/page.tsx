@@ -1,7 +1,8 @@
-import Footer from "@dcm/components/footer";
-import Header from "@dcm/components/header";
-import ListPage from "@dcm/components/list-page/component";
-import { getWords } from "@dcm/data/data";
+import React from "react";
+import Footer from "../../components/footer.tsx";
+import Header from "../../components/header.tsx";
+import ListPage from "../../components/list-page/component.tsx";
+import { getWords } from "../../data/data.ts";
 import type { Metadata } from "next";
 import type { FC } from "react";
 
@@ -14,7 +15,7 @@ const Paraules: FC = async () => {
 
   return (
     <>
-      <Header currentPage={"paraules"} />
+      <Header currentPage="paraules" />
       <ListPage groupedData={groupedWords} />
       <Footer />
     </>

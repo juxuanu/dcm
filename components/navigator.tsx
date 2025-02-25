@@ -1,6 +1,6 @@
-import Button from "@dcm/components/button";
-import SearchIcon from "@dcm/components/search-icon";
-import type React from "react";
+import Button from "../components/button.tsx";
+import SearchIcon from "../components/search-icon.tsx";
+import React from "react";
 import { createRef, useEffect, useState } from "react";
 
 interface Props {

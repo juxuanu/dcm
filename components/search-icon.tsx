@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import React from "react";
 
 const SearchIcon: FC = () => (
   <div className="h-4 w-4">

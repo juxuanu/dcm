@@ -1,4 +1,4 @@
-import { url } from "@dcm/app/_site-config";
+import { url } from "./_site-config.ts";
 import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";

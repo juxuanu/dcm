@@ -1,10 +1,11 @@
-import Footer from "@dcm/components/footer";
-import Header from "@dcm/components/header";
-import Section from "@dcm/components/section";
-import StringPair from "@dcm/components/string-pair";
-import { getCuriosities } from "@dcm/data/data";
+import Footer from "../../components/footer.tsx";
+import Header from "../../components/header.tsx";
+import Section from "../../components/section.tsx";
+import StringPair from "../../components/string-pair.tsx";
+import { getCuriosities } from "../../data/data.ts";
 import type { Metadata } from "next";
 import type { FC } from "react";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Curiositats | MxC",
@@ -15,8 +16,8 @@ const Curiositats: FC = () => {
 
   return (
     <>
-      <Header currentPage={"curiositats"} />
-      <Section title={"Articles definits"}>
+      <Header currentPage="curiositats" />
+      <Section title="Articles definits">
         <ul className="space-y-2">
           {curiositats["articles definits"].llista.map((a) => (
             <li key={a.ca}>
@@ -38,12 +39,13 @@ const Curiositats: FC = () => {
             <ul className="ml-2 list-inside list-disc space-y-2">
               {curiositats["articles definits"].notes["2"].llista.map((i) => {
                 const split = i.split(":");
-                if (split.length === 1)
+                if (split.length === 1) {
                   return (
                     <li key={i} className="first-letter:capitalize">
                       {split[0]}
                     </li>
                   );
+                }
                 return (
                   <li key={i} className="first-letter:capitalize">
                     <span className="font-semibold">{split[0]}</span>:{split[1]}
@@ -54,10 +56,10 @@ const Curiositats: FC = () => {
           </div>
         </div>
       </Section>
-      <Section title={"Articles personals"} extraClasses={"mt-6"}>
+      <Section title="Articles personals" extraClasses="mt-6">
         <p>{curiositats["articles personals"]}</p>
       </Section>
-      <Section title={"Maneres de dir"} extraClasses={"mt-6"}>
+      <Section title="Maneres de dir" extraClasses="mt-6">
         <ul className="space-y-2">
           {curiositats["maneres de dir"].llista.map((i) => (
             <li key={i.concepte}>
@@ -66,19 +68,20 @@ const Curiositats: FC = () => {
           ))}
         </ul>
       </Section>
-      <Section title={"Pronúncia"} extraClasses={"mt-6"}>
+      <Section title="Pronúncia" extraClasses="mt-6">
         <p className="mb-4 first-letter:uppercase">
           {curiositats.pronúncia.text}.
         </p>
         <ul className="space-y-2">
           {curiositats.pronúncia.llista.map((i) => {
             const split = i.split(":");
-            if (split.length === 1)
+            if (split.length === 1) {
               return (
                 <li key={i} className="first-letter:capitalize">
                   {split[0]}
                 </li>
               );
+            }
             return (
               <li key={i} className="first-letter:capitalize">
                 <span className="font-semibold">{split[0]}</span>:
@@ -88,16 +91,17 @@ const Curiositats: FC = () => {
           })}
         </ul>
       </Section>
-      <Section title={"Sufixos"} extraClasses="mt-6">
+      <Section title="Sufixos" extraClasses="mt-6">
         <ul className="space-y-2">
           {curiositats.sufixos.llista.map((i) => {
             const split = i.split(":");
-            if (split.length === 1)
+            if (split.length === 1) {
               return (
                 <li key={i} className="first-letter:capitalize">
                   {split[0]}
                 </li>
               );
+            }
             return (
               <li key={i} className="first-letter:capitalize">
                 <span className="font-semibold">{split[0]}</span>:

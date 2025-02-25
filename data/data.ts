@@ -51,7 +51,7 @@ const dataPaths = {
   expressions: "data/expressions.csv",
 } as const;
 
-const parseCsv = async (
+const parseCsv = (
   path: string,
   delimiter = ";",
 ): Promise<[string, string][][]> => {
@@ -68,7 +68,7 @@ const parseCsv = async (
       groupBy((w) => w[0].normalize("NFD").charAt(0).toUpperCase()),
       mergeMap((group) => group.pipe(toArray())),
       map((pairGroup) =>
-        pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0])),
+        pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0]))
       ),
       toArray(),
     ),
@@ -77,7 +77,7 @@ const parseCsv = async (
 
 const buildDataPairs = (data: [string, string][][]): DataPair[][] =>
   data.map((pairs) =>
-    pairs.map((pair) => ({ id: randomUUID(), one: pair[0], two: pair[1] })),
+    pairs.map((pair) => ({ id: randomUUID(), one: pair[0], two: pair[1] }))
   );
 
 export const getWords = async (): Promise<Word[][]> => {
