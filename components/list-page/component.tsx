@@ -1,11 +1,11 @@
 "use client";
-import Navigator from "../../components/navigator.tsx";
-import Section from "../../components/section.tsx";
-import StringPair from "../../components/string-pair.tsx";
-import type { Expression, Word } from "../../data/data.ts";
-import React from "react";
+import Navigator from "@dcm/components/navigator";
+import Section from "@dcm/components/section";
+import StringPair from "@dcm/components/string-pair";
+import type { Expression, Word } from "@dcm/data/data";
+import type React from "react";
 import { useCallback, useMemo, useState } from "react";
-import { filterSearchTerm } from "./filter-search-term.ts";
+import { filterSearchTerm } from "./filter-search-term";
 
 export type Data = Expression[][] | Word[][];
 
@@ -31,7 +31,7 @@ const ListPage: React.FC<Props> = ({ groupedData }) => {
         <Section
           key={group[0].id}
           title={group[0].one.charAt(0)}
-          extraClasses="mt-6"
+          extraClasses={"mt-6"}
           id={group[0].one.charAt(0)}
         >
           <ul className="space-y-2">

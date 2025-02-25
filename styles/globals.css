@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --color-book-blue: rgb(40, 53, 101);
+  --color-book-blue: rgb(40, 53, 101);
 }
 
 /*
@@ -13,17 +13,17 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
 body {
-    -webkit-font-feature-settings: "lnum";
-    -moz-font-feature-settings: "lnum";
-    font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  -moz-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
 }

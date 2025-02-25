@@ -4,8 +4,13 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import type { ReactNode } from "react";
 import "../styles/globals.css";
-import { authors, description, keywords, title, url } from "./_site-config.ts";
-import React from "react";
+import {
+  url,
+  authors,
+  description,
+  keywords,
+  title,
+} from "@dcm/app/_site-config";
 
 const raleway = Raleway({ subsets: ["latin"] });
 

@@ -1,7 +1,6 @@
 {
   "name": "diccionari-catala-mallorqui",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,6 +24,7 @@
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "0.6.0",
     "@swc/core": "^1.10.18",
+    "@types/node": "22.8.1",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "clsx": "^2.1.1",
@@ -32,5 +32,6 @@
     "postcss": "8.5.3",
     "tailwind-merge": "^3.0.2",
     "typescript": "5.7.3"
-  }
+  },
+  "packageManager": "pnpm@10.0.0-rc.0+sha512.bce495587126f9a37d64150bf80dcf9bd96f0d64cfd450c9b1a7e5bf2cfc81aef3d50178f259855351c872905a240861a55031652c81e8a11665bfa65f6a1dc2"
 }

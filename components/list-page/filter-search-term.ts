@@ -1,4 +1,4 @@
-import type { Data } from "./component.tsx";
+import type { Data } from "./component";
 
 export function filterSearchTerm(
   data: Data,
@@ -12,7 +12,7 @@ export function filterSearchTerm(
         (item) =>
           normalize(item.one).includes(normalize(searchTerm)) ||
           normalize(item.two).includes(normalize(searchTerm)),
-      )
+      ),
     )
     .filter((group) => group.length > 0);
 }
