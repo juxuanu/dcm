@@ -1,11 +1,8 @@
 import withExportImages from "next-export-optimize-images";
 
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",
-  experimental: {
-    reactCompiler: true
-  }
+  output: "export"
 };
 
 export default withExportImages(nextConfig);
