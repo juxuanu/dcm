@@ -9,28 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.8",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "babel-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
-    "next": "15.3.2",
+    "next": "15.3.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "rxjs": "^7.8.2",
     "sharp": "^0.34.2",
-    "tailwindcss": "4.1.7"
+    "tailwindcss": "4.1.8"
   },
   "devDependencies": {
     "@swc/cli": "0.7.7",
     "@swc/core": "^1.11.29",
     "@types/node": "22.8.1",
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "clsx": "^2.1.1",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.3.3",
     "next-export-optimize-images": "^4.6.2",
-    "postcss": "8.5.3",
+    "postcss": "8.5.4",
     "tailwind-merge": "^3.3.0",
     "typescript": "5.8.3"
   },
