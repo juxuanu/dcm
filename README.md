@@ -3,8 +3,9 @@
 Aquest repositori conté el codi pel web https://diccionari.icarns.xyz.
 S'utilitza Next.js.
 
-Instal·la les dependències amb pnpm
+Per començar, instal·la `mise`: https://mise.jdx.dev/, llavors:
 
 ```bash
-pnpm i
+mise install # instal·la les eines
+mise tasks   # comandes que pots executar amb `mise run <...>`
 ```
