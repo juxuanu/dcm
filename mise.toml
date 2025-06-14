@@ -1,2 +1,10 @@
 [tools]
 node = "22"
+pnpm = "latest"
+
+[tasks.install_deps]
+run = "pnpm install"
+
+[tasks.lint]
+run = "pnpm run lint"
+depends = "install_deps"
