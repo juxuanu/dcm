@@ -44,6 +44,11 @@ const Navigator: React.FC<Props> = (props) => {
           role="searchbox"
           aria-roledescription="buscador de paraules i descripcions"
           onChange={(event) => props.onSearch(event.currentTarget.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              setSearchMode(false);
+            }
+          }}
           placeholder="això"
         />
       </div>
