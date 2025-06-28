@@ -6,6 +6,7 @@ S'utilitza Next.js.
 Per començar, instal·la `mise`: https://mise.jdx.dev/, llavors:
 
 ```bash
-mise install # instal·la les eines
-mise tasks   # comandes que pots executar amb `mise run <...>`
+mise trust mise.toml # fes que mise se'n refiï del fitxer de configuració
+mise install         # instal·la les eines que s'utilitzen
+mise tasks           # llista les comandes que pots executar amb `mise run <...>`
 ```
