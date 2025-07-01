@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.11",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "babel-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
@@ -17,12 +17,12 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "sharp": "^0.34.2",
-    "tailwindcss": "4.1.10"
+    "tailwindcss": "4.1.11"
   },
   "devDependencies": {
     "@swc/cli": "0.7.7",
-    "@swc/core": "^1.12.5",
-    "@types/node": "24.0.3",
+    "@swc/core": "^1.12.7",
+    "@types/node": "24.0.7",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "clsx": "^2.1.1",
