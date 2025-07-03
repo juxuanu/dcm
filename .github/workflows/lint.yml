@@ -16,16 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
+
       - name: Get pnpm store directory
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
-
       - name: Cache pnpm-installed packages
         uses: actions/cache@v4
         with:
           path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('index/**.json', 'files/**') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-${{ hashFiles('index/**.json', 'files/**') }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.json') }}
+          restore-keys: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.json') }}
+
       - run: mise run lint
