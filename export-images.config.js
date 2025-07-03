@@ -3,6 +3,7 @@
  */
 const config = {
   generateFormats: ["avif", "webp"],
+  cacheDir: ".next/cache/optimized-images"
 };
 
 module.exports = config;
