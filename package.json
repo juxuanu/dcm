@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
     "babel-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
     "next": "15.3.4",
+    "prettier": "^3.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "sharp": "^0.34.2",
@@ -38,7 +37,6 @@
     "onlyBuiltDependencies": [
       "@swc/core",
       "@tailwindcss/oxide",
-      "@vercel/speed-insights",
       "sharp",
       "unrs-resolver"
     ]

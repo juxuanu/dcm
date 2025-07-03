@@ -4,8 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    groups: 
+    groups:
       npm-dependencies:
         applies-to: version-updates
-        patterns: 
-         - "*"
+        patterns:
+          - "*"

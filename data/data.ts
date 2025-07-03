@@ -39,12 +39,12 @@ let wordsCache: Word[][] | undefined;
 const dataPaths = {
   curiosities: "data/curiosities.json",
   words: "data/words.csv",
-  expressions: "data/expressions.csv"
+  expressions: "data/expressions.csv",
 } as const;
 
 const parseCsv = async (
   path: string,
-  delimiter = ";"
+  delimiter = ";",
 ): Promise<[string, string][][]> => {
   const fileData = readFileSync(path, { encoding: "utf-8" });
 
@@ -57,16 +57,20 @@ const parseCsv = async (
     })
     .sort((a, b) => a[0].localeCompare(b[0]));
 
-  const grouped = Object.groupBy(pairs, (w) => w[0].normalize("NFD").charAt(0).toUpperCase());
+  const grouped = Object.groupBy(pairs, (w) =>
+    w[0].normalize("NFD").charAt(0).toUpperCase(),
+  );
 
   return Object.values(grouped)
     .filter((group): group is [string, string][] => group !== undefined)
-    .map((pairGroup) => pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0])));
+    .map((pairGroup) =>
+      pairGroup.sort((a, b) => a[0][0].localeCompare(b[0][0])),
+    );
 };
 
 const buildDataPairs = (data: [string, string][][]): DataPair[][] =>
   data.map((pairs) =>
-    pairs.map((pair) => ({ id: randomUUID(), one: pair[0], two: pair[1] }))
+    pairs.map((pair) => ({ id: randomUUID(), one: pair[0], two: pair[1] })),
   );
 
 export const getWords = async (): Promise<Word[][]> => {
@@ -87,7 +91,7 @@ export const getCuriosities = (): Curiosities => {
   if (curiositiesCache) return curiositiesCache;
 
   const fileContents = fs.readFileSync(dataPaths.curiosities, {
-    encoding: "utf-8"
+    encoding: "utf-8",
   });
   curiositiesCache = JSON.parse(fileContents) as Curiosities;
   return curiositiesCache;
