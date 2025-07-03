@@ -29,16 +29,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
-      - run: mise run build
 
-      - name: Cache pnpm-installed packages
+      - name: Cache for pnpm-installed packages
         uses: actions/cache@v4
         with:
           path: ~/.local/share/pnpm/store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      - name: Cache Next
+      - name: Cache for Next
         uses: actions/cache@v4
         with:
           path: |
@@ -48,6 +46,8 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+
+      - run: mise run build
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
