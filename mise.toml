@@ -1,22 +1,21 @@
 [tools]
-node = "22"
-pnpm = "latest"
+bun = "latest"
 
 [tasks.install_deps]
-run = "pnpm install"
+run = "bun --bun install"
 description = "Instal·la les dependències del projecte"
 
 [tasks.lint]
-run = "pnpm run lint"
+run = "bun --bun run lint"
 depends = "install_deps"
 description = "Comprova l'estil del codi"
 
 [tasks.dev]
-run = "pnpm run dev"
+run = "bun --bun run dev"
 depends = "install_deps"
 description = "Executa el projecte per desenvolupar-lo"
 
 [tasks.build]
-run = "pnpm run build"
+run = "bun --bun run build"
 depends = "install_deps"
 description = "Genera els fitxers per publicar el projecte"
