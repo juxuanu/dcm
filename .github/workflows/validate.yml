@@ -1,0 +1,13 @@
+name: Validate project
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/setup.yml
+
+      - run: mise run lint
+      - run: mise run build
