@@ -41,9 +41,12 @@ jobs:
         id: verify-changed-files
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            if [ $(mise run lint && mise run build) ]; then 
+            if mise run lint && mise run build; then
               echo "changed=true" >> $GITHUB_OUTPUT
-              echo "Changes detected in dependency files"
+              echo "Validation passed - changes are good to go"
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+              echo "Validation failed - will not create PR"
             fi
           else
             echo "changed=false" >> $GITHUB_OUTPUT
