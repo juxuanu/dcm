@@ -3,7 +3,7 @@ name: Update Dependencies
 on:
   schedule:
     # Run every Monday at 9 AM UTC
-    - cron: '0 9 * * 1'
+    - cron: "0 9 * * 1"
   workflow_dispatch: # Allow manual trigger
 
 jobs:
@@ -55,22 +55,22 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: '(dependències) actualització setmanal'
-          title: '(dependències) actualització setmanal'
+          commit-message: "(dependències) actualització setmanal"
+          title: "(dependències) actualització setmanal"
           body: |
             # 🔄 Actualització automàtica de dependències
-            
+
             Aquesta PR conté els canvis generats de `bun update --latest`.
-            
+
             ## Canvis
             - Les dependències haurien d'estar a l'última versió
             - El fitxer `bun.lock` també hauria d'haver-se modificat
-            
+
             ## Notes
             - Revisar paquets actualitzats
             - Tests. Hauria de córrer un build
             - Check for any breaking changes in the updated packages
-            
+
             ---
             *This PR was created automatically by the Update Dependencies workflow*
           branch: chore/update-dependencies
