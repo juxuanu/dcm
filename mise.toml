@@ -2,7 +2,7 @@
 bun = "latest"
 
 [tasks.install_deps]
-run = "bun --bun install"
+run = "bun --bun install --frozen-lockfile"
 description = "Instal·la les dependències del projecte"
 
 [tasks.lint]
