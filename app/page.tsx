@@ -5,12 +5,12 @@ import InstagramLogo from "@dcm/components/instagram-logo";
 import LinkedInLogo from "@dcm/components/linkedin-logo";
 import Section from "@dcm/components/section";
 import StringPair from "@dcm/components/string-pair";
-import Picture from "next-export-optimize-images/picture";
 import Link from "next/link";
 import type { FC } from "react";
 import llibret1 from "../public/llibret1.jpeg";
 import llibret2 from "../public/llibret2.jpeg";
 import llibret3 from "../public/llibret3.jpeg";
+import Image from "next/image";
 
 const Home: FC = () => {
   return (
@@ -41,7 +41,7 @@ const Home: FC = () => {
           }
         >
           <Link href={"/llibret1.jpeg"} prefetch={false}>
-            <Picture
+            <Image
               src={llibret1}
               title={"Llibret: vocabulari"}
               alt={"Llibret: vocabulari"}
@@ -49,7 +49,7 @@ const Home: FC = () => {
             />
           </Link>
           <Link href={"/llibret2.jpeg"} prefetch={false}>
-            <Picture
+            <Image
               src={llibret2}
               title={"Llibret: portada"}
               alt={"Llibret: portada"}
@@ -57,7 +57,7 @@ const Home: FC = () => {
             />
           </Link>
           <Link href={"/llibret3.jpeg"} prefetch={false}>
-            <Picture
+            <Image
               src={llibret3}
               title={"Llibret: paraules"}
               alt={"Llibret: paraules"}
