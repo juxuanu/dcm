@@ -4,6 +4,7 @@ description: "Setup mise and caching for bun and Next.js"
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v4
     - uses: jdx/mise-action@v2
 
     - name: Cache for bun-installed packages
