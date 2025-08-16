@@ -1,3 +1,5 @@
+Deprecat. He migrat a SourceHut: https://git.sr.ht/~juxuanu/mallorqui-per-catalans.
+
 # dcm: Mallorquí per catalans
 
 Aquest repositori conté el codi pel web https://diccionari.icarns.xyz.
